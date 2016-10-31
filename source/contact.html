@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<include src="header.html" 
 
-    <include src="header.html" title="CIC | Contact Us"></include>
+    title="CIC | Contact Us">
     
     <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDd9CaMe3ZcjYIx01WaIJIV-SntJN88bhM&sensor=false&extension=.js'></script> 
 
@@ -44,8 +44,8 @@
                         if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
                         if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
                         if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
-                       if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
-                       if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+                        if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                        if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
                         marker = new google.maps.Marker({
                             icon: markericon,
                             position: new google.maps.LatLng(locations[i][5], locations[i][6]),
@@ -62,41 +62,41 @@
             link = web;
             }
                         bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
-                 }
-             function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
-                  var infoWindowVisible = (function () {
-                          var currentlyVisible = false;
-                          return function (visible) {
-                              if (visible !== undefined) {
-                                  currentlyVisible = visible;
-                              }
-                              return currentlyVisible;
-                           };
-                       }());
-                       iw = new google.maps.InfoWindow();
-                       google.maps.event.addListener(marker, 'click', function() {
-                           if (infoWindowVisible()) {
-                               iw.close();
-                               infoWindowVisible(false);
-                           } else {
-                               var html= "<div style='color:#000;background-color:#fff;padding:5px;width:350px;'><h4>"+title+"</h4><a href='https://www.google.co.uk/maps/place/CIC/@53.0426099,-2.1971931,17z/data=!3m1!4b1!4m5!3m4!1s0x487a4293efa67d79:0x86534cf80abb8969!8m2!3d53.0426075!4d-2.1955231' target='_blank'><p><b>Open in Google Maps</b></p></a><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
-                               iw = new google.maps.InfoWindow({content:html});
-                               iw.open(map,marker);
-                               infoWindowVisible(true);
-                           }
+                    }
+                function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+                    var infoWindowVisible = (function () {
+                            var currentlyVisible = false;
+                            return function (visible) {
+                                if (visible !== undefined) {
+                                    currentlyVisible = visible;
+                                }
+                                return currentlyVisible;
+                            };
+                        }());
+                        iw = new google.maps.InfoWindow();
+                        google.maps.event.addListener(marker, 'click', function() {
+                            if (infoWindowVisible()) {
+                                iw.close();
+                                infoWindowVisible(false);
+                            } else {
+                                var html= "<div style='color:#000;background-color:#fff;padding:5px;width:350px;'><h4>"+title+"</h4><a href='https://www.google.co.uk/maps/place/CIC/@53.0426099,-2.1971931,17z/data=!3m1!4b1!4m5!3m4!1s0x487a4293efa67d79:0x86534cf80abb8969!8m2!3d53.0426075!4d-2.1955231' target='_blank'><p><b>Open in Google Maps</b></p></a><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
+                                iw = new google.maps.InfoWindow({content:html});
+                                iw.open(map,marker);
+                                infoWindowVisible(true);
+                            }
                     });
                     google.maps.event.addListener(iw, 'closeclick', function () {
                         infoWindowVisible(false);
                     });
-             }
+                }
             }
     </script>
 
-</head>
+</include>
 
-<body id="contact">
+<body id="page-top">
     
-    <include src="nav.html"><div class="main-logo"></div></include>
+    <include src="nav.html" affix="affix"><div class="main-logo"></div></include>
     
     <section id="contact-page" class="no-padding top-margin"> 
         

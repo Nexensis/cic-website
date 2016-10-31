@@ -3,41 +3,40 @@
 
 <head>
 
-    <head>
+    <!--Source code available at https://github.com/lewisbooth/cic-website-->
 
-        <title>CIC | Contact Us</title>
+    <title>CIC | Contact Us</title>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Creative Design, Branding, Packaging, Photography, Video, TV Advertising, CGI and Product Design, all in house, with offices in the UK and China.">
-        <meta name="author" content="CIC">
-        
-        <!-- Theme Colors -->
-        <meta name="theme-color" content="#2D83AA">    
-        <meta name="msapplication-navbutton-color" content="#2D83AA">
-        <meta name="apple-mobile-web-app-status-bar-style" content="#2D83AA">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A creative agency with design, imagery, video and editorial teams all under one roof, we blur the boundaries between disciplines.">
+    <meta name="author" content="Lewis Booth - CIC Photographic Ltd.">
 
-        <!-- CSS -->
-        <link href="css/cic.min.css" rel="stylesheet" type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,700' rel='stylesheet' type='text/css'>
-        <link rel="icon" type="image/png" href="img/cic-logo-favicon.png">
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#2D83AA">    
+    <meta name="msapplication-navbutton-color" content="#2D83AA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2D83AA">
 
-        <script src="https://use.typekit.net/wph5mxs.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!-- CSS -->
+    <link href="css/cic.min.css" rel="stylesheet" type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="img/cic-logo-favicon.png">
 
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-61027506-1', 'auto');
-            ga('send', 'pageview');
-        </script>    
-        
-        <script src="js/jquery.js"></script>
-        
-    </head>
+    <script src="https://use.typekit.net/wph5mxs.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-61027506-1', 'auto');
+        ga('send', 'pageview');
+    </script>    
+
+    <script src="js/jquery.js"></script>
+    
     
     <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDd9CaMe3ZcjYIx01WaIJIV-SntJN88bhM&sensor=false&extension=.js'></script> 
 
@@ -78,8 +77,8 @@
                         if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
                         if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
                         if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
-                       if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
-                       if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+                        if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                        if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
                         marker = new google.maps.Marker({
                             icon: markericon,
                             position: new google.maps.LatLng(locations[i][5], locations[i][6]),
@@ -96,39 +95,40 @@
             link = web;
             }
                         bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
-                 }
-             function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
-                  var infoWindowVisible = (function () {
-                          var currentlyVisible = false;
-                          return function (visible) {
-                              if (visible !== undefined) {
-                                  currentlyVisible = visible;
-                              }
-                              return currentlyVisible;
-                           };
-                       }());
-                       iw = new google.maps.InfoWindow();
-                       google.maps.event.addListener(marker, 'click', function() {
-                           if (infoWindowVisible()) {
-                               iw.close();
-                               infoWindowVisible(false);
-                           } else {
-                               var html= "<div style='color:#000;background-color:#fff;padding:5px;width:350px;'><h4>"+title+"</h4><a href='https://www.google.co.uk/maps/place/CIC/@53.0426099,-2.1971931,17z/data=!3m1!4b1!4m5!3m4!1s0x487a4293efa67d79:0x86534cf80abb8969!8m2!3d53.0426075!4d-2.1955231' target='_blank'><p><b>Open in Google Maps</b></p></a><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
-                               iw = new google.maps.InfoWindow({content:html});
-                               iw.open(map,marker);
-                               infoWindowVisible(true);
-                           }
+                    }
+                function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+                    var infoWindowVisible = (function () {
+                            var currentlyVisible = false;
+                            return function (visible) {
+                                if (visible !== undefined) {
+                                    currentlyVisible = visible;
+                                }
+                                return currentlyVisible;
+                            };
+                        }());
+                        iw = new google.maps.InfoWindow();
+                        google.maps.event.addListener(marker, 'click', function() {
+                            if (infoWindowVisible()) {
+                                iw.close();
+                                infoWindowVisible(false);
+                            } else {
+                                var html= "<div style='color:#000;background-color:#fff;padding:5px;width:350px;'><h4>"+title+"</h4><a href='https://www.google.co.uk/maps/place/CIC/@53.0426099,-2.1971931,17z/data=!3m1!4b1!4m5!3m4!1s0x487a4293efa67d79:0x86534cf80abb8969!8m2!3d53.0426075!4d-2.1955231' target='_blank'><p><b>Open in Google Maps</b></p></a><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
+                                iw = new google.maps.InfoWindow({content:html});
+                                iw.open(map,marker);
+                                infoWindowVisible(true);
+                            }
                     });
                     google.maps.event.addListener(iw, 'closeclick', function () {
                         infoWindowVisible(false);
                     });
-             }
+                }
             }
     </script>
 
+
 </head>
 
-<body id="contact">
+<body id="page-top">
     
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
         <div class="container-fluid">
@@ -139,7 +139,7 @@
                     <span class="icon-bar icon-bar-middle"></span>
                     <span class="icon-bar icon-bar-bottom"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html"><div class="main-logo"></div></a>
+                <a class="navbar-brand page-scroll" href="index.html#main"><div class="main-logo"></div></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -152,6 +152,10 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="contact.html">Contact</a>
+                    </li>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="contact.html#client-list">Clients</a>
                     </li>
                     <li>
                         <a class="page-scroll page-scroll-bottom" href="http://login.ciconline.co.uk">Client Area</a>
@@ -440,7 +444,7 @@
                 <a href="contact.html">
                     <button class="btn btn-primary btn-med footer-contact mobile-hide" id="contact-button">CONTACT US <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button>
                 </a>
-                <a href="#main">
+                <a href="#page-top" class="page-scroll">
                     <button class="btn btn-primary btn-med footer-contact" id="contact-button">BACK TO TOP <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
                 </a>
             </div>

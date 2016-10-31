@@ -3,14 +3,16 @@
 
 <head>
 
-    <title>CIC Portfolio | Creative Design, Photography, CGI, Video and TV Advertising in Stoke on Trent</title>
+    <!--Source code available at https://github.com/lewisbooth/cic-website-->
+
+    <title>CIC | Portfolio</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Creative Design, Branding, Packaging, Photography, Video, TV Advertising, CGI and Product Design, all in house, with offices in the UK and China.">
-    <meta name="author" content="CIC">
-    
+    <meta name="description" content="A creative agency with design, imagery, video and editorial teams all under one roof, we blur the boundaries between disciplines.">
+    <meta name="author" content="Lewis Booth - CIC Photographic Ltd.">
+
     <!-- Theme Colors -->
     <meta name="theme-color" content="#2D83AA">    
     <meta name="msapplication-navbutton-color" content="#2D83AA">
@@ -32,12 +34,12 @@
         ga('create', 'UA-61027506-1', 'auto');
         ga('send', 'pageview');
     </script>    
-    
+
     <script src="js/jquery.js"></script>
     
 </head>
 
-<body id="portfolio" class="body-shift">
+<body id="page-top" class="body-shift">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
         <div class="container-fluid">
@@ -48,7 +50,7 @@
                     <span class="icon-bar icon-bar-middle"></span>
                     <span class="icon-bar icon-bar-bottom"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html"><div class="main-logo"></div></a>
+                <a class="navbar-brand page-scroll" href="index.html#main"><div class="main-logo"></div></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -61,6 +63,10 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="contact.html">Contact</a>
+                    </li>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="contact.html#client-list">Clients</a>
                     </li>
                     <li>
                         <a class="page-scroll page-scroll-bottom" href="http://login.ciconline.co.uk">Client Area</a>
@@ -181,25 +187,26 @@
                 </a>
             </div>
         </div>   
-    </section>
+    </section>             
+
     
     <div class="clearfix"></div>
-             
-    <section class="no-padding" id="footer">
+
+    <footer class="no-padding" id="footer">
         <div class="col-xs-12 footer-container">
             <div class="col-xs-6 footer-text">
                 &copy; CIC Photographic Ltd 2016<span class="mobile-hide"> - All rights reserved</span>
             </div>
             <div class="col-xs-6 footer-text">
-                <a href="contact.html" class="page-scroll">
-                    <button class="btn btn-primary btn-med footer-contact" id="contact-button">CONTACT US <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button>
+                <a href="contact.html">
+                    <button class="btn btn-primary btn-med footer-contact mobile-hide" id="contact-button">CONTACT US <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button>
+                </a>
+                <a href="#page-top" class="page-scroll">
+                    <button class="btn btn-primary btn-med footer-contact" id="contact-button">BACK TO TOP <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
                 </a>
             </div>
         </div> 
-    </section>       
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    </footer> 
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -208,73 +215,68 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
-    
+
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-    
-    <!--Isotope-->
+
+    <script>            
+        $( "li a" ).click(function() {
+            $("#bs-example-navbar-collapse-1").attr( "aria-expanded","false" );
+            $("#bs-example-navbar-collapse-1").removeClass("in");
+        }); 
+    </script>    
+
+    <!--Isotope Grid-->
     <script src="js/isotope.min.js"></script>
     <script src="js/imagesloaded.min.js"></script>
     
     <script>
         
-    // Fixes scrollbar messing up the window width which causes white gaps on Windows    
+        // Fixes scrollbar messing up the window width which causes white gaps on Windows    
 
-    $(function() {
-        
-        // init Isotope when document loaded
-        var $grid = $('.grid').imagesLoaded( function() {
+        $(function() {
             
-            
-            
-            // Store # parameter and add "." before hash
-            var hashID = "." + window.location.hash.substring(1);
-            
-            // Loads grid using link # value if available and sets checked filter button
-            if(window.location.hash) {
+            // init Isotope when document loaded
+            var $grid = $('.grid').imagesLoaded( function() {        
                 
-                $grid.isotope({
-                  filter: hashID, 
-                });
+                // Store # parameter and add "." before hash
+                var hashID = "." + window.location.hash.substring(1);
                 
-                $(function() {
-                    var $buttonGroup = $('.button-group');
-                    $buttonGroup.find('.is-checked').removeClass('is-checked');                    
-                    $buttonGroup.find("[data-filter='" + hashID + "']").addClass('is-checked');
-                }); 
-                
-            } else {
-                $grid.isotope({
+                // Loads grid using link # value if available and sets checked filter button
+                if(window.location.hash) {
                     
+                    $grid.isotope({
+                    filter: hashID, 
+                    });
+                    
+                    $(function() {
+                        var $buttonGroup = $('.button-group');
+                        $buttonGroup.find('.is-checked').removeClass('is-checked');                    
+                        $buttonGroup.find("[data-filter='" + hashID + "']").addClass('is-checked');
+                    }); 
+                    
+                } else {
+                    $grid.isotope({
+                        
+                    });
+                }
+                
+                // filter items on button click
+                $('.filter-button-group').on( 'click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
                 });
-            }
-            
-            // filter items on button click
-            $('.filter-button-group').on( 'click', 'button', function() {
-              var filterValue = $(this).attr('data-filter');
-              $grid.isotope({ filter: filterValue });
-            });
-            
-            // change is-checked class on buttons
-            $('.button-group').each( function( i, buttonGroup ) {
-                var $buttonGroup = $( buttonGroup );
-                $buttonGroup.on( 'click', 'button', function() {
-                  $buttonGroup.find('.is-checked').removeClass('is-checked');
-                  $( this ).addClass('is-checked');
-                });
-            });    
-        });
-        
-    })
-    
-    </script>
-    
-    <script>
-              
-       $( "li a" ).click(function() {
-          $("#bs-example-navbar-collapse-1").attr( "aria-expanded","false" );
-          $("#bs-example-navbar-collapse-1").removeClass("in");
-        }); 
+                
+                // change is-checked class on buttons
+                $('.button-group').each( function( i, buttonGroup ) {
+                    var $buttonGroup = $( buttonGroup );
+                    $buttonGroup.on( 'click', 'button', function() {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $( this ).addClass('is-checked');
+                    });
+                });    
+            });        
+        })
 
     </script>
 
