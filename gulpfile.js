@@ -11,18 +11,18 @@ gulp.task('default', ['browser-sync']);
 gulp.task('browser-sync', ['watch'], function() {
     bs.init({
         server: {
-            baseDir: "./build",
-            reloadDelay: 2000
+            baseDir: "./build"
         }
     });
     gulp.watch(["./build/**/*.html","./build/**/*.js"]).on('change', bs.reload);
 });
 
-gulp.task('watch', ['html-include', 'css', 'scripts', 'assets'], function() {
+gulp.task('watch', ['html-include', 'css', 'scripts', 'assets', 'fonts'], function() {
     gulp.watch('./source/**/*.html', ['html-include']);
     gulp.watch('./source/**/*.js', ['scripts']);
     gulp.watch('./source/**/*.css', ['css']);
     gulp.watch('./source/img/**/*', ['assets']);
+    gulp.watch('./source/fonts/**/*', ['fonts']);
 });
  
 gulp.task('html-include', function() {
@@ -41,6 +41,12 @@ gulp.task('assets', function() {
     return gulp.src('./source/img/**/*')
         .pipe(changed('./build/img')) // Ignore unchanged files
         .pipe(gulp.dest('./build/img'));
+});
+
+gulp.task('fonts', function() {
+    return gulp.src('./source/fonts/**/*')
+        .pipe(changed('./build/fonts')) // Ignore unchanged files
+        .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('css', function() {

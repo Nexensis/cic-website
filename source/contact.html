@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <include src="header.html" title="CIC | Contact Us"></include>
+    
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDd9CaMe3ZcjYIx01WaIJIV-SntJN88bhM&sensor=false&extension=.js'></script> 
+
+    <script> 
+        google.maps.event.addDomListener(window, 'load', init);
+        var map;
+        function init() {
+            var mapOptions = {
+                center: new google.maps.LatLng(53.042577, -2.195247),
+                zoom: 15,
+                zoomControl: true,
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.DEFAULT,
+                },
+                disableDoubleClickZoom: false,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                },
+                scaleControl: false,
+                scrollwheel: false,
+                panControl: false,
+                streetViewControl: true,
+                draggable : true,
+                overviewMapControl: false,
+                overviewMapControlOptions: {
+                    opened: false,
+                },
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}],
+            }
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+            var locations = [
+            ['CIC Photographic Ltd', 'Creative Branding, Packaging, Photography, Video, TV Advertising, CGI and Product Design, all in house, with offices in the UK and China.', '01782 525530', 'jon.hills@ciconline.co.uk', 'www.ciconline.co.uk', 53.042577, -2.195247, 'http://54.194.137.6/img/cic-logo-map-icon-blue.png']
+                    ];
+                    for (i = 0; i < locations.length; i++) {
+                        if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+                        if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+                        if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+                       if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                       if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+                        marker = new google.maps.Marker({
+                            icon: markericon,
+                            position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                            map: map,
+                            title: locations[i][0],
+                            desc: description,
+                            tel: telephone,
+                            email: email,
+                            web: web
+                        });
+            if (web.substring(0, 7) != "http://") {
+            link = "http://" + web;
+            } else {
+            link = web;
+            }
+                        bindInfoWindow(marker, map, locations[i][0], description, telephone, email, web, link);
+                 }
+             function bindInfoWindow(marker, map, title, desc, telephone, email, web, link) {
+                  var infoWindowVisible = (function () {
+                          var currentlyVisible = false;
+                          return function (visible) {
+                              if (visible !== undefined) {
+                                  currentlyVisible = visible;
+                              }
+                              return currentlyVisible;
+                           };
+                       }());
+                       iw = new google.maps.InfoWindow();
+                       google.maps.event.addListener(marker, 'click', function() {
+                           if (infoWindowVisible()) {
+                               iw.close();
+                               infoWindowVisible(false);
+                           } else {
+                               var html= "<div style='color:#000;background-color:#fff;padding:5px;width:350px;'><h4>"+title+"</h4><a href='https://www.google.co.uk/maps/place/CIC/@53.0426099,-2.1971931,17z/data=!3m1!4b1!4m5!3m4!1s0x487a4293efa67d79:0x86534cf80abb8969!8m2!3d53.0426075!4d-2.1955231' target='_blank'><p><b>Open in Google Maps</b></p></a><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
+                               iw = new google.maps.InfoWindow({content:html});
+                               iw.open(map,marker);
+                               infoWindowVisible(true);
+                           }
+                    });
+                    google.maps.event.addListener(iw, 'closeclick', function () {
+                        infoWindowVisible(false);
+                    });
+             }
+            }
+    </script>
+
+</head>
+
+<body id="contact">
+    
+    <include src="nav.html"><div class="main-logo"></div></include>
+    
+    <section id="contact-page" class="no-padding top-margin"> 
+        
+        <div class="col-lg-12 portfolio-top"><h1>CONTACT US</h1></div> 
+        <div class="clearfix"></div>        
+        
+        <div id="map"></div>
+        
+        <section id="contact-info">            
+            <div class="col-xs-12 col-sm-6 col-md-4 col-md-push-2 centered">
+                <p class="cic-address"> <strong>Creative Innovation Centre</strong> <br />
+                    Cross Hill, Burslem, Stoke-on-Trent, Staffordshire, ST6 3JY <br /><br />
+                </p>
+                <p>
+                    Email: <span id="encoded-email"></span><br />
+                    Tel: <a href="tel:+441782525530">+44 (0) 1782 525 530</a>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-md-push-2 centered">
+                <p class="cic-address"> <strong>China Studio</strong> <br />
+                    Rm501, Zhongxun Mansion,<br />56 Liuhe Road, Hangzhou, China<br /><br />
+                </p>
+                <p>
+                    Tel: <a href="tel:057187205369">0571 8720 5369</a>
+                </p>
+            </div>
+        </section>
+        
+        <div class="clearfix"></div>
+
+        <section id="uk-faces" class="no-padding">
+            <h2 class="centered">Meet the team</h2>
+
+            <div class="contact-faces">
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding contact-section">
+                    <a id="email-link-rob-pearson">
+                        <div class="contact-overlay">
+                            <div class="contact-overlay-info centered light">
+                                <span class="glyphicon glyphicon-envelope email-icon"></span>
+                                <p class="send-email-text">Send Email</p>
+                                <p class="email-address" id="email-address-rob-pearson"></p>
+                            </div>
+                        </div>
+                    </a>
+                    <img class="img-responsive contact-face" alt="Robert Pearson" src="img/contact/photos/robert-pearson.jpg">
+                    <p class="contact-face-info">
+                        <b>Robert Pearson</b>
+                        <br>CEO
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding contact-section">
+                    <a id="email-link-nicola-tayler">
+                        <div class="contact-overlay">
+                            <div class="contact-overlay-info centered light">
+                                <span class="glyphicon glyphicon-envelope email-icon"></span>
+                                <p class="send-email-text">Send Email</p>
+                                <p class="email-address" id="email-address-nicola-tayler"></p>
+                            </div>
+                        </div>
+                    </a>
+                    <img class="img-responsive contact-face" alt="Nicola Tayler" src="img/contact/photos/nicola-tayler.jpg">
+                    <p class="contact-face-info">
+                        <b>Nicola Tayler</b>
+                        <br>Managing Director
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding contact-section">
+                    <a id="email-link-jon-hills">
+                        <div class="contact-overlay">
+                            <div class="contact-overlay-info centered light">
+                                <span class="glyphicon glyphicon-envelope email-icon"></span>
+                                <p class="send-email-text">Send Email</p>
+                                <p class="email-address" id="email-address-jon-hills"></p>
+                            </div>
+                        </div>
+                    </a>
+                    <img class="img-responsive contact-face" alt="Jon Hills" src="img/contact/photos/jon-hills.jpg">
+                    <p class="contact-face-info">
+                        <b>Jon Hills</b>
+                        <br>Commercial Director
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding contact-section">
+                    <a id="email-link-david-walker">
+                        <div class="contact-overlay">
+                            <div class="contact-overlay-info centered light">
+                                <span class="glyphicon glyphicon-envelope email-icon"></span>
+                                <p class="send-email-text">Send Email</p>
+                                <p class="email-address" id="email-address-david-walker"></p>
+                            </div>
+                        </div>
+                    </a>
+                    <img class="img-responsive contact-face" alt="David Walker" src="img/contact/photos/david-walker.jpg">
+                    <p class="contact-face-info">
+                        <b>David Walker</b>
+                        <br>Creative Director
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Steve Allen" src="img/contact/photos/steve-allen.jpg">
+                    <p class="contact-face-info">
+                        <b>Steve Allen</b>
+                        <br>Imaging Director
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Darryl Lee" src="img/contact/photos/darryl-lee.jpg">
+                    <p class="contact-face-info">
+                        <b>Darryl Lee</b>
+                        <br>Account Director
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Matt Chaddock" src="img/contact/photos/matt-chaddock.jpg">
+                    <p class="contact-face-info">
+                        <b>Matt Chaddock</b>
+                        <br>Studio Manager
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Jackie Leese" src="img/contact/photos/jackie-leese.jpg">
+                    <p class="contact-face-info">
+                        <b>Jackie Leese</b>
+                        <br>Account Manager
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Peter Robinson" src="img/contact/photos/peter-robinson.jpg">
+                    <p class="contact-face-info">
+                        <b>Peter Robinson</b>
+                        <br>Head of CGI
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Kerry Pickin" src="img/contact/photos/kerry-pickin.jpg">
+                    <p class="contact-face-info">
+                        <b>Kerry Pickin</b>
+                        <br>Head of Video
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Ben Farr" src="img/contact/photos/ben-farr.jpg">
+                    <p class="contact-face-info">
+                        <b>Ben Farr</b>
+                        <br>Head of Photography
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Josh Green" src="img/contact/photos/josh-green.jpg">
+                    <p class="contact-face-info">
+                        <b>Josh Green</b>
+                        <br>Head of Product Design
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Michael Spooner" src="img/contact/photos/michael-spooner.jpg">
+                    <p class="contact-face-info">
+                        <b>Michael Spooner</b>
+                        <br>Lead Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Alex Smith" src="img/contact/photos/alex-smith.jpg">
+                    <p class="contact-face-info">
+                        <b>Alex Smith</b>
+                        <br>Lead Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Dave Elinor" src="img/contact/photos/dave-elinor.jpg">
+                    <p class="contact-face-info">
+                        <b>Dave Elinor</b>
+                        <br>Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Katie Howell" src="img/contact/photos/katie-howell.jpg">
+                    <p class="contact-face-info">
+                        <b>Katie Howell</b>
+                        <br>Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Clare Mould" src="img/contact/photos/clare-mould.jpg">
+                    <p class="contact-face-info">
+                        <b>Clare Mould</b>
+                        <br>Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Lewis Booth" src="img/contact/photos/lewis-booth.jpg">
+                    <p class="contact-face-info">
+                        <b>Lewis Booth</b>
+                        <br>Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Karl Whitfield" src="img/contact/photos/karl-whitfield.jpg">
+                    <p class="contact-face-info">
+                        <b>Karl Whitfield</b>
+                        <br>Creative
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Matthew Greenaway" src="img/contact/photos/matthew-greenaway.jpg">
+                    <p class="contact-face-info">
+                        <b>Matthew Greenaway</b>
+                        <br>Lead CGI Artist
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Peter Snarski" src="img/contact/photos/peter-snarski.jpg">
+                    <p class="contact-face-info">
+                        <b>Peter Snarski</b>
+                        <br>CGI Artist
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Dagime Tsegaye" src="img/contact/photos/dagime-tsegaye.jpg">
+                    <p class="contact-face-info">
+                        <b>Dagime Tsegaye</b>
+                        <br>CGI Artist
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Luke Hodgkins" src="img/contact/photos/luke-hodgkins.jpg">
+                    <p class="contact-face-info">
+                        <b>Luke Hodgkins</b>
+                        <br>Photographer
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Sarah Pickin" src="img/contact/photos/sarah-pickin.jpg">
+                    <p class="contact-face-info">
+                        <b>Sarah Pickin</b>
+                        <br>Photographer
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-15 no-padding">
+                    <img class="img-responsive contact-face" alt="Simon Bough" src="img/contact/photos/simon-bough.jpg">
+                    <p class="contact-face-info">
+                        <b>Simon Bough</b>
+                        <br>Videographer
+                    </p>
+                </div>
+            </div>
+                
+        </section>
+            
+        <section id="client-list">
+            
+            <h2 class="centered client-header">Join our ever-growing list of clients</h2>
+            <div class="col-xs-12 col-sm-4 no-padding">
+                <img class="img-responsive" alt="CIC Client List 1" src="img/contact/client-list-1.jpg">
+            </div>
+            <div class="col-xs-12 col-sm-4 no-padding">
+                <img class="img-responsive" alt="CIC Client List 2" src="img/contact/client-list-2.jpg">
+            </div>
+            <div class="col-xs-12 col-sm-4 no-padding">
+                <img class="img-responsive" alt="CIC Client List 3" src="img/contact/client-list-3.jpg">
+            </div>
+            
+        </section>
+        
+    </section>
+    
+    <div class="clearfix"></div>
+             
+    <include src="footer.html"></include>
+
+    <script type="text/javascript" language="javascript">
+        <!--
+        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+        // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+        // This code is freeware provided these four comment lines remain intact
+        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+            
+        //INFO
+            
+        { coded = "QH7w@vQvwH4QHd.vw.hL"
+          key = "k1wgFbrSma8nNZ7cJBjiL5D69ApK0uxHlXGvYPeQ3UMqotysRhOV4WIzfTd2CE"
+          shift=coded.length
+          link=""
+          for (i=0; i<coded.length; i++) {
+            if (key.indexOf(coded.charAt(i))==-1) {
+              ltr = coded.charAt(i)
+              link += (ltr)
+            }
+            else {     
+              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+              link += (key.charAt(ltr))
+            }
+          }
+          var element = document.getElementById("encoded-email");
+          element.innerHTML = "<a href='mailto:"+link+"'>"+link+"</a>";
+        }
+        
+        //-->        
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        <!--
+        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+        // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+        // This code is freeware provided these four comment lines remain intact
+        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+            
+        //ROB
+            
+        { coded = "hbT@uOubiDOiL.ub.4e"
+          key = "QgvwMyLnCAR7ja4VlUsKoGpP6WiqmBkEFX9DI0cb8rt25O3HfeNSYxZdJuT1hz"
+          shift=coded.length
+          link=""
+          for (i=0; i<coded.length; i++) {
+            if (key.indexOf(coded.charAt(i))==-1) {
+              ltr = coded.charAt(i)
+              link += (ltr)
+            }
+            else {     
+              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+              link += (key.charAt(ltr))
+            }
+          }
+        var element = document.getElementById("email-link-rob-pearson");
+        var element1 = document.getElementById("email-address-rob-pearson");
+          element.setAttribute("href", "mailto:"+link+"");
+          element1.innerHTML = ""+link+"";
+        }
+        
+        //-->        
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        <!--
+        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+        // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+        // This code is freeware provided these four comment lines remain intact
+        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+            
+        //NICOLA
+            
+        { coded = "4GJfuX.xXdupN@JGJf4uG4p.Jf.8L"
+          key = "qK6cDG5bPhutmWCpwjFTyQa9ngrkHRoZJEI0YVi8x1OlBsUzedMXS4vNL37f2A"
+          shift=coded.length
+          link=""
+          for (i=0; i<coded.length; i++) {
+            if (key.indexOf(coded.charAt(i))==-1) {
+              ltr = coded.charAt(i)
+              link += (ltr)
+            }
+            else {     
+              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+              link += (key.charAt(ltr))
+            }
+          }
+        var element = document.getElementById("email-link-nicola-tayler");
+        var element1 = document.getElementById("email-address-nicola-tayler");
+          element.setAttribute("href", "mailto:"+link+"");
+          element1.innerHTML = ""+link+"";
+        }
+        
+        //-->        
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        <!--
+        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+        // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+        // This code is freeware provided these four comment lines remain intact
+        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+            
+        //JON
+            
+        { coded = "kU5.dQggj@bQbU5gQ5N.bU.YK"
+          key = "jgGXWIqd3wNvJCOQancrZHP90kz1ASoFxmLuRsl48t5bhype7BK2if6UVMTEYD"
+          shift=coded.length
+          link=""
+          for (i=0; i<coded.length; i++) {
+            if (key.indexOf(coded.charAt(i))==-1) {
+              ltr = coded.charAt(i)
+              link += (ltr)
+            }
+            else {     
+              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+              link += (key.charAt(ltr))
+            }
+          }
+        var element = document.getElementById("email-link-jon-hills");
+        var element1 = document.getElementById("email-address-jon-hills");
+          element.setAttribute("href", "mailto:"+link+"");
+          element1.innerHTML = ""+link+"";
+        }
+        
+        //-->        
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        <!--
+        // Email obfuscator script 2.1 by Tim Williams, University of Arizona
+        // Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+        // This code is freeware provided these four comment lines remain intact
+        // A wizard to generate this code is at http://www.jottings.com/obfuscator/
+            
+        //DAVE
+            
+        { coded = "Olzj.DliNjW@FGFXUiGUj.FX.MN"
+          key = "N98LnX2fGvBmQjVrlphd7PwxKqY0uScU5sAkz63JoEWibtO4eDRaIZCMyFgT1H"
+          shift=coded.length
+          link=""
+          for (i=0; i<coded.length; i++) {
+            if (key.indexOf(coded.charAt(i))==-1) {
+              ltr = coded.charAt(i)
+              link += (ltr)
+            }
+            else {     
+              ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+              link += (key.charAt(ltr))
+            }
+          }
+        var element = document.getElementById("email-link-david-walker");
+        var element1 = document.getElementById("email-address-david-walker");
+          element.setAttribute("href", "mailto:"+link+"");
+          element1.innerHTML = ""+link+"";
+        }
+        
+        //-->        
+    </script>  
+    
+</body>
+
+</html>

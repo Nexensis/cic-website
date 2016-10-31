@@ -367,21 +367,26 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
 
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <script>            
+        $( "li a" ).click(function() {
+            $("#bs-example-navbar-collapse-1").attr( "aria-expanded","false" );
+            $("#bs-example-navbar-collapse-1").removeClass("in");
+        }); 
+    </script>
+
     <!--Page-specific JS-->
     <script src="js/typed.js"></script>
     <script src="js/typed.custom.js"></script>    
     <script src="js/creative-fullscreen.js"></script>   
 
+    <!--Grey fade on load-->
     <script>
-       $( "li a" ).click(function() {
-          $("#bs-example-navbar-collapse-1").attr( "aria-expanded","false" );
-          $("#bs-example-navbar-collapse-1").removeClass("in");
-        }); 
-
         $(document).ready(function(){ 
             $('.loading-screen').fadeOut(1000);
         });        
     </script>
-    
 
 </html>
