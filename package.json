@@ -1,0 +1,23 @@
+{
+  "name": "cic-website",
+  "version": "1.0.0",
+  "description": "An update to the [CIC website](http://www.ciconline.co.uk)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewisbooth/cic-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lewisbooth/cic-website/issues"
+  },
+  "homepage": "https://github.com/lewisbooth/cic-website#readme"
+}
