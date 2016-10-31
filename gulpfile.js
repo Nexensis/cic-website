@@ -14,7 +14,7 @@ gulp.task('browser-sync', ['watch'], function() {
             baseDir: "./build"
         }
     });
-    gulp.watch(["./build/**/*.html","./build/**/*.js"]).on('change', bs.reload);
+    gulp.watch(["./build/**/*.html","./build/**/*.js","./build/img/**/*"]).on('change', bs.reload);
 });
 
 gulp.task('watch', ['html-include', 'css', 'scripts', 'assets', 'fonts'], function() {
@@ -32,9 +32,9 @@ gulp.task('html-include', function() {
 });
 
 gulp.task('scripts', function() {
-  gulp.src('./source/js/*.js')
-    .pipe(changed('./build/js')) // Ignore unchanged files
-    .pipe(gulp.dest('./build/js/'))
+    return gulp.src('./source/js/*.js')
+        .pipe(changed('./build/js')) // Ignore unchanged files
+        .pipe(gulp.dest('./build/js/'));
 });
 
 gulp.task('assets', function() {
@@ -50,9 +50,9 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('css', function() {
-  gulp.src('./source/css/*.css')    
-    .pipe(concat('cic.min.css'))
-    .pipe(nano())    
-    .pipe(gulp.dest('./build/css/'))
-    .pipe(bs.stream());
+    return gulp.src('./source/css/*.css')    
+        .pipe(concat('cic.min.css'))
+        .pipe(nano())    
+        .pipe(gulp.dest('./build/css/'))
+        .pipe(bs.stream());
 });
