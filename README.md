@@ -1,6 +1,4 @@
 # CIC Website
-An update to the [CIC website](http://www.ciconline.co.uk) 
+An update to the [CIC website](http://www.ciconline.co.uk), converted to use Node/Gulp as an asset pipeline.
 
-Converted to use Node/Gulp as an asset pipeline.
-
-Multiple pages added 
+'gulp' will start the pipeline including BrowserSync
