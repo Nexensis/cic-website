@@ -12,11 +12,11 @@
     <include src="../nav.html" affix="affix"><div class="main-logo"></div></include>  
 
     <div class="case-study-top warwick-castle">
-        <video class="full-panel-case-study" loop="true" autoplay="true" preload="auto" poster="../img/portfolio/warwick-castle/warwick-castle-video-cover.jpg" data-setup="{}">
-            <source src="../img/portfolio/warwick-castle/warwick-castle-case-study-cover.mp4" type='video/mp4'>
+        <video class="full-panel-case-study" loop="true" autoplay="true" preload="auto" poster="/img/portfolio/warwick-castle/warwick-castle-video-cover.jpg" data-setup="{}">
+            <source src="/img/portfolio/warwick-castle/warwick-castle-case-study-cover.mp4" type='video/mp4'>
         </video>
         <div id="case-study-header" class="col-xs-12 no-padding warwick-castle-shift">             
-            <img src="../img/portfolio/warwick-castle/warwick-castle-logo.png" alt="Warwick Castle Logo" class="warwick-castle-logo">
+            <img src="/img/portfolio/warwick-castle/warwick-castle-logo.png" alt="Warwick Castle Logo" class="warwick-castle-logo">
             <div class="clearfix"></div>
             <p class="case-study-description warwick-castle-logo centered">Videos, Brochure &amp;<br />Vehicle Branding</p> 
         </div> 
@@ -67,11 +67,11 @@
         </div>
         
         <div class="col-xs-12 no-padding pixelfix">
-            <img class="img-responsive" alt="Warwick Castle Coach Wrap" src="../img/portfolio/warwick-castle/merlin-for-groups-brochure-mockup.jpg">       
+            <img class="img-responsive" alt="Warwick Castle Coach Wrap" src="/img/portfolio/warwick-castle/merlin-for-groups-brochure-mockup.jpg">       
         </div>
     
         <div class="col-xs-12 no-padding pixelfix">
-            <img class="img-responsive" alt="Warwick Castle Coach Wrap" src="../img/portfolio/warwick-castle/warwick-castle-coach-wrap-mockup.jpg">       
+            <img class="img-responsive" alt="Warwick Castle Coach Wrap" src="/img/portfolio/warwick-castle/warwick-castle-coach-wrap-mockup.jpg">       
         </div>
     
         <div class="case-study-section">
@@ -83,26 +83,17 @@
             </p>
         </div>
     
-        <div class="clearfix pixelfix"></div> 
-        
-        <div class="case-study-section no-padding-top">
-            <div class="col-xs-12 col-sm-6 no-padding">
-                <p class="case-study-section-paragraph no-padding center-mobile"><a href='../portfolio.html'>&lt;&lt; Back to Portfolio</a></p>
-            </div>
-            <div class="col-xs-12 col-sm-6 no-padding">
-                <p class="case-study-section-paragraph no-padding right-align-desktop">
-                    <a href='leisure-grow.html'>&lt;&lt; Previous Project </a>&#124;
-                    <a href='ideal-shopping-recipe-books.html'> Next Project &gt;&gt;</a>
-                </p>
-            </div>
-        </div>
-        
-    </section>
+    </section>    
     
+    <include src="portfolio-navigation.html"
+        previous="leisure-grow.html"
+            next="ideal-shopping-recipe-books.html">
+    </include>        
+
     <include src="../footer.html"></include>    
     
     <!-- Fix window height on mobiles to stop content jumping around while scrolling -->
-    <script src="../js/window-fix.js"></script>
+    <script src="/js/window-fix.js"></script>
     
 </body>
 
