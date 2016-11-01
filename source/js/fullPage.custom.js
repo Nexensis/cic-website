@@ -99,7 +99,7 @@
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
-                $('.services-scroller').addClass('hide')
+                $('.services-scroller').removeClass('hide')
                                 
             else if ($('#page-top').hasClass('fp-viewing-design'))
                 $('.color-icons-nav .color-icon-design').addClass('color-icon-border'),
