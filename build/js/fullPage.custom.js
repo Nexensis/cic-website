@@ -175,11 +175,13 @@
                 $('.service-section-header-design').removeClass('show'),
                 $('.service-section-header-china').removeClass('show'),
                 $('.header-content-inner').removeClass('show'),
+                $('#footer').addClass('hide'),
                 $('.about-container').removeClass('show')
                 
             else if ($('#page-top').hasClass('fp-viewing-china'))
                 $('.services-scroller').addClass('hide'),
                 $('.service-section-header-china').addClass('show'),
+                $('#footer').removeClass('hide'),
                 $('.service-section-header-photo').removeClass('show'),
                 $('.service-section-header-video').removeClass('show'),
                 $('.service-section-header-cgi').removeClass('show'),
@@ -191,6 +193,7 @@
             else 
                 $('.header-content-inner').addClass('show'),
                 $('.services-scroller').addClass('hide'),
+                $('#footer').addClass('hide'),
                 $('.service-section-header-design').removeClass('show'),
                 $('.service-section-header-photo').removeClass('show'),
                 $('.service-section-header-video').removeClass('show'),

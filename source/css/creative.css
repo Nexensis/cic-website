@@ -138,6 +138,12 @@ button {
     }
 }
 
+#footer {    
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
 .loading-screen {
     background-color: #222;
     width: 100%;
@@ -712,16 +718,16 @@ aside {
 
 .color-icons {
     height: 10px;
-    width: 100px;
+    width: 110px;
     margin: 35px auto 0 auto;
 }
 
 .color-icon-border {
-    box-shadow: 0 0 0 2pt #fff;  
+    box-shadow: 0 0 0 1pt #fff;  
     
     width: 20px !important;
     height: 20px !important;
-    margin: 5px 1px !important;
+    margin: 3px 1px !important;
     
     -webkit-transition: all 0.7s;
     -moz-transition: all 0.7s;
@@ -730,8 +736,8 @@ aside {
 }
 
 .color-icon-about {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #ccc;
     border-radius: 10px;
     float: left;
@@ -739,8 +745,8 @@ aside {
 }
 
 .color-icon-design {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #2D83AA;
     border-radius: 10px;
     float: left;
@@ -748,8 +754,8 @@ aside {
 }
 
 .color-icon-video {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #219382;
     border-radius: 10px;
     float: left;
@@ -757,8 +763,8 @@ aside {
 }
 
 .color-icon-product {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #F3B633;
     border-radius: 10px;
     float: left;
@@ -766,8 +772,8 @@ aside {
 }
 
 .color-icon-cgi {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #C7004B;
     border-radius: 10px;
     float: left;
@@ -775,8 +781,8 @@ aside {
 }
 
 .color-icon-photo {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #282D45;
     border-radius: 10px;
     float: left;
@@ -1096,16 +1102,12 @@ header .header-content .header-content-inner .video-subheading p {
     opacity: 0.9;
 }
 
-#photo-panel-video {
-    opacity: 0.9;
-}
-
 #cgi-panel-video {
     opacity: 0.8;
 }
 
 #product-panel-video {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .about-container {
@@ -1118,7 +1120,7 @@ header .header-content .header-content-inner .video-subheading p {
 .services-scroller {
     position: fixed;
     bottom: 8%;
-    left: calc(50% - 60px);
+    left: calc(50% - 68px);
     padding: 10px;
     border-radius: 15px;
     z-index: 9999999;
@@ -1131,16 +1133,28 @@ header .header-content .header-content-inner .video-subheading p {
 
 .color-icons-nav {
     position: relative;
-    height: 20px;
+    height: 25px;
     width: 120px;
+    padding-left: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
 }
 
 .color-icons-nav .color-icon {
-    margin: 8px 5px;
+    margin: 7px 5px;
     
-    -webkit-transition: all 0.7s;
-    -moz-transition: all 0.7s;
-    transition: all 0.7s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.color-icons-nav .color-icon:hover {
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 0;
+    width: 16px;
+    height: 16px;
 }
 
 .services-menu {
@@ -2061,6 +2075,50 @@ fieldset[disabled] .btn-default.active {
 .open > .dropdown-toggle.btn-primary {
     border-color: #2D83AA;
     color: #2D83AA;
+    background-color: #fff;
+}
+
+.btn-photography:hover,
+.btn-photography:focus,
+.btn-photography.focus,
+.btn-photography:active,
+.btn-photography.active,
+.open > .dropdown-toggle.btn-photography {
+    border-color: #282D45;
+    color: #282D45;
+    background-color: #fff;
+}
+
+.btn-video:hover,
+.btn-video:focus,
+.btn-video.focus,
+.btn-video:active,
+.btn-video.active,
+.open > .dropdown-toggle.btn-video {
+    border-color: #219382;
+    color: #219382;
+    background-color: #fff;
+}
+
+.btn-cgi:hover,
+.btn-cgi:focus,
+.btn-cgi.focus,
+.btn-cgi:active,
+.btn-cgi.active,
+.open > .dropdown-toggle.btn-cgi {
+    border-color: #C7004B;
+    color: #C7004B;
+    background-color: #fff;
+}
+
+.btn-product:hover,
+.btn-product:focus,
+.btn-product.focus,
+.btn-product:active,
+.btn-product.active,
+.open > .dropdown-toggle.btn-product {
+    border-color: #F3B633;
+    color: #F3B633;
     background-color: #fff;
 }
 
