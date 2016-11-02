@@ -99,7 +99,8 @@
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
-                $('.services-scroller').removeClass('hide')
+                $('.services-scroller').removeClass('hide'),
+                $('.service-section-header-design').removeClass('show')
                                 
             else if ($('#page-top').hasClass('fp-viewing-design'))
                 $('.color-icons-nav .color-icon-design').addClass('color-icon-border'),
@@ -216,7 +217,6 @@
             var screenWidth = $(window).width(); 
 
             $("#services").css({"height": screenHeight});
-            $(".service-button-shift").css({"margin-left": screenWidth*0.001});
             $(".full-page-video-holder").css({"height": screenHeight});
             $(".about-container").css({"height": screenHeight});
             

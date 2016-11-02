@@ -62,17 +62,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll page-scroll-top" href="/portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="/index.html#service">Services</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/contact.html">Contact</a>
-                    </li>
+                        <a class="page-scroll page-scroll-top" href="/portfolio.html">Portfolio</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/contact.html#client-list">Clients</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/contact.html">Contact</a>
                     </li>
                     <li>
                         <a class="page-scroll page-scroll-bottom" href="http://login.ciconline.co.uk">Client Area</a>
@@ -124,7 +123,7 @@
                         </p>
                     </div>
                     <a href="portfolio.html">
-                    <button class="btn btn-primary btn-xl page-scroll">SEE OUR WORK</button>
+                        <button class="btn btn-primary btn-xl page-scroll">SEE OUR WORK</button>
                     </a>
                     <div class="color-icons">
                         <div class="color-icon-design"></div>
@@ -155,14 +154,13 @@
                 <div class="about-text-container">
                     <div class="col-xs-12 about-left-column no-padding">
                         <p class="about-header">
-                            The <span class="cic-blue-mobile">full service</span> <br />
+                            The <span class="cic-blue-mobile">full-service</span> <br />
                             Integrated creative agency
                             <hr class="mobile-hide">
                         </p>   
-                    </div>             
-
-                    <div class="col-xs-12 no-padding about-right-column mobile-hide">
-                        <p class="centered">
+                    </div>  
+                    <div class="col-xs-12 no-padding about-right-column">
+                        <p class="about-strapline">
                             <span class="open-sans-italic grey-mobile">
                                     With design, imagery, video and editorial teams 
                                 <span class="white-text cic-blue-mobile"> 
@@ -191,16 +189,23 @@
             <video id="design-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-design/service-design-video-cover.jpg" data-setup="{}">
             <source src="img/portfolio/service-design/service-design-video.mp4" type='video/mp4'>
             </video>
-            <div class="col-xs-12 home-pad service-section-header service-section-header-design">
-                <p class="section-description din-uppercase light no-margin-left">Design makes<br />everything possible</p> 
-                <p class="small light no-margin-left"><em>Einstein once said:<br />"Imagination is more important than knowledge."</em></p> 
-                <p class="small light no-margin-left">At CIC, we believe that both imagination and knowledge are equally important to success. Whilst imagination allows us to develop unique solutions, it is our knowledge that informs us what will work. Our understanding of upcoming trends, the latest technological advances and awareness of the client’s needs ensures that every solution – no matter how imaginative – will be perfect for you, your business and your market.</p> 
-                <p class="small light no-margin-left services-list"><strong>Services:</strong><br />Branding, Advertising, Packaging, Editorial, Illustration, Digital</p> 
-                <div class="clearfix"></div> 
+            <div class="service-section-header service-section-header-design">
+                <p class="section-description din-uppercase light">Design makes<br />everything possible</p> 
+                <hr class="mobile-hide">
+                <span class="about-right-column">
+                    <p class="about-strapline">
+                        <span class="open-sans-italic grey-mobile">
+                                Einstein once said:<br />"Imagination is more important than knowledge."
+                        </span>
+                    </p>
+                </span>
+                <p class="small light centered">Whilst imagination allows us to develop unique solutions, it is our knowledge that informs us what will work. Our understanding of upcoming trends, the latest technological advances and awareness of the client’s needs ensures that every solution – no matter how imaginative – will be perfect for you, your business and your market.</p> 
+                <p class="small light centered"><strong>Services:</strong> Branding, Advertising, Packaging, Editorial, Illustration, Digital</p> 
                 <a href="portfolio.html#design">
-                    <button class="btn btn-primary btn-med service-button-shift">DESIGN PROJECTS</button>
+                    <button class="btn btn-primary btn-med service-button-shift centered">DESIGN PROJECTS</button>
                 </a>
-            </div> 
+            </div>
+            
         </div>
     </div>
 
@@ -215,15 +220,15 @@
             <video id="photo-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-photo/service-photo-video-cover.jpg" data-setup="{}">
             <source src="img/portfolio/service-photo/service-photo-video.mp4" type='video/mp4'>
             </video>
-            <div class="col-xs-12 home-pad service-section-header service-section-header-photo">
-                <p class="section-description din-uppercase light no-margin-left">Pixel perfect<br />commercial content</p> 
-                <p class="small light no-margin-left">With a 3500ft<sup>2</sup> custom-built studio and industry standard equipment, we offer an unprecedented amount of creative space all under one roof. Experienced in e-commerce, lifestyle, food, fashion and packshot photography, we endeavour to create visually striking content for all commercial platforms.</p>  
-                <p class="small light no-margin-left services-list"><strong>Services:</strong><br />Packshot, Lifestyle, Fashion, Food, Location, Model</p> 
-                <div class="clearfix"></div>
+            <div class="service-section-header service-section-header-photo">
+                <p class="section-description din-uppercase light">Pixel perfect<br />commercial content</p> 
+                <hr class="mobile-hide">
+                <p class="small light centered">With a 3500ft<sup>2</sup> custom-built studio and industry standard equipment, we offer an unprecedented amount of creative space all under one roof. Experienced in e-commerce, lifestyle, food, fashion and packshot photography, we endeavour to create visually striking content for all commercial platforms.</p> 
+                <p class="small light centered"><strong>Services:</strong> Packshot, Lifestyle, Fashion, Food, Location, Model</p>
                 <a href="portfolio.html#photography">
                     <button class="btn btn-primary btn-med service-button-shift">PHOTOGRAPHY PROJECTS</button>
                 </a>
-            </div> 
+            </div>
         </div>
     </div>
 
@@ -238,16 +243,15 @@
             <video id="video-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-video/video-section-cover.jpg" data-setup="{}">
             <source src="img/portfolio/service-video/video-section-cover.mp4" type='video/mp4'>
             </video>
-            <div class="col-xs-12 home-pad service-section-header service-section-header-video">
-                <p class="section-description din-uppercase light no-margin-left">Engaging, captivating, informative</p> 
-                <p class="small light no-margin-left">Everything that we produce is created with the sole purpose of telling a story, never more so than with video. From  product demonstrations to TV campaigns, motion graphics to live action video, our expert team offers full green screen capability, CG animation and location shoots along side our purpose built video studios.</p>  
-                <p class="small light no-margin-left services-list"><strong>Services:</strong><br />
-                Live action, Product demo, Presenter, DRTV, CG Animation, Corporate</p> 
-                <div class="clearfix"></div>
+            <div class="service-section-header service-section-header-video">
+                <p class="section-description din-uppercase light">Engaging, captivating,<br />informative</p> 
+                <hr class="mobile-hide">
+                <p class="small light centered">Everything that we produce is created with the sole purpose of telling a story, never more so than with video. From  product demonstrations to TV campaigns, motion graphics to live action video, our expert team offers full green screen capability, CG animation and location shoots along side our purpose built video studios.</p> 
+                <p class="small light centered"><strong>Services:</strong> Live action, Product demo, Presenter, DRTV, CG Animation, Corporate</p>
                 <a href="portfolio.html#video">
                     <button class="btn btn-primary btn-med service-button-shift">VIDEO PROJECTS</button>
                 </a>
-            </div> 
+            </div>
         </div>
     </div>
 
@@ -262,15 +266,15 @@
             <video id="cgi-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-cgi/cgi-section-cover.jpg" data-setup="{}">
             <source src="img/portfolio/service-cgi/service-cgi-section-cover.mp4" type='video/mp4'>
             </video>
-            <div class="col-xs-12 home-pad service-section-header service-section-header-cgi">
-                <p class="section-description din-uppercase light no-margin-left">Oustanding, photorealistic visuals</p> 
-                <p class="small light no-margin-left">Developing stunning, photorealistic 3D visuals our team of experienced and talented 3D creatives are forever pushing the boundaries of computer generated imagery. From the smallest component, right up to full-blown architectural masterpieces; a broad spectrum of industries benefit from our CG skills.</p> 
-                <p class="small light no-margin-left services-list"><strong>Services:</strong><br />3D Modelling, Visualisation, Interior, Product, Architecture, Animation</p>
-                <div class="clearfix"></div>
+            <div class="service-section-header service-section-header-cgi">
+                <p class="section-description din-uppercase light">Oustanding, photorealistic<br />visual content</p> 
+                <hr class="mobile-hide">
+                <p class="small light centered">Developing stunning, photorealistic 3D visuals, our team of experienced and talented 3D creatives are forever pushing the boundaries of computer generated imagery. From the smallest component, right up to full-blown architectural masterpieces; a broad spectrum of industries benefit from our CG skills.</p> 
+                <p class="small light centered"><strong>Services:</strong> 3D Modelling, Visualisation, Interior, Product, Architecture, Animation</p>
                 <a href="portfolio.html#cgi">
                     <button class="btn btn-primary btn-med service-button-shift">CGI PROJECTS</button>
                 </a>
-            </div> 
+            </div>
         </div>
     </div>
 
@@ -285,15 +289,15 @@
             <video id="product-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-product/service-product-video-cover.jpg" data-setup="{}">
             <source src="img/portfolio/service-product/service-product-video.mp4" type='video/mp4'>
             </video>
-            <div class="col-xs-12 home-pad service-section-header service-section-header-product">
-                <p class="section-description din-uppercase light no-margin-left">Endless<br />opportunities</p> 
-                <p class="small light no-margin-left">A further string to our CG bow, our NPD (New Product Development) team help a variety of companies design and develop market leading products. Whether it is utilising our in depth knowledge of upcoming trends, colours or materials, or if you are looking to design and develop a totally unique product from scratch, we can help bring your vision into reality.</p> 
-                <p class="small light no-margin-left services-list"><strong>Services:</strong><br />Concept design, Ideation sketching, 3D Visualisation, Market analysis, Trend reports, CAD Production</p> 
-                <div class="clearfix"></div>
+            <div class="service-section-header service-section-header-product">
+                <p class="section-description din-uppercase light">Endless opportunities</p> 
+                <hr class="mobile-hide">
+                <p class="small light centered">Our NPD (New Product Development) team help a variety of companies design and develop market leading products. Whether it is utilising our in depth knowledge of upcoming trends, colours or materials, or if you are looking to design and develop a totally unique product from scratch, we can help bring your vision into reality.</p> 
+                <p class="small light centered"><strong>Services:</strong> Concept design, Ideation sketching, 3D Visualisation, Market analysis, Trend reports, CAD Production</p>
                 <a href="portfolio.html#npd">
                     <button class="btn btn-primary btn-med service-button-shift">NPD PROJECTS</button>
                 </a>
-            </div> 
+            </div>
         </div>  
     </div>
     
@@ -308,18 +312,16 @@
             </div>
             <video id="china-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-china/service-china-video-cover.jpg" data-setup="{}">
             <source src="img/contact/photos/mark-doras.jpg" type='video/mp4'>
-            </video>                    
-            <div class="col-xs-12 no-padding home-footer-container">
-
-                
+            </video>
+            <div class="service-section-header service-section-header-china">
+                <p class="section-description din-uppercase light">Where it's made<br />and where it's sold</p> 
+                <hr class="mobile-hide">
+                <p class="small light centered">Sourcing product in China? We can fast track your product to market. From modelling your product to printing your packaging, CIC China complements the UK team every step of the way ensuring your marketing material is produced quickly and professionally reducing your time to market.</p> 
+                <p class="small light centered"><strong>Services:</strong> Design, Print Production and Logistics, CGI, Product Design, Print Quality Control</p>
+                <a href="portfolio.html#npd">
+                    <button class="btn btn-primary btn-med service-button-shift">WATCH THE VIDEO <span class="glyphicon glyphicon-play"></span></button>
+                </a>
             </div>
-            <div class="col-xs-12 home-pad service-section-header service-section-header-china">
-                <div class="clearfix"></div>
-                <p class="section-description din-uppercase light no-margin-left">Where it's made<br />and where it's sold</p> 
-                <p class="small light no-margin-left">Sourcing product in China? We can fast track your product to market. From modelling your product to printing your packaging, CIC China complements the UK team every step of the way ensuring your marketing material is produced quickly and professionally reducing your time to market.</p> 
-                <p class="small light no-margin-left services-list"><strong>Services:</strong><br />Design, Print Production and Logistics, CGI, Product Design, Print Quality Control</p>
-                <div class="clearfix"></div>
-            </div> 
         </div>
     </div>
 

@@ -1053,7 +1053,7 @@ header .header-content .header-content-inner .video-subheading p {
 }
 
 .design-section {
-    background-color: #222;
+    background-color: #222;    
 }
 
 .photo-section {
@@ -1072,6 +1072,33 @@ header .header-content .header-content-inner .video-subheading p {
     background-color: #222;
 }
 
+.china-section {
+    background-color: #222;
+}
+
+#design-panel-video {
+    opacity: 0.8;
+}
+
+#photo-panel-video {
+    opacity: 0.85;
+}
+
+#video-panel-video {
+    opacity: 0.8;
+}
+
+#cgi-panel-video {
+    opacity: 0.8;
+}
+
+#product-panel-video {
+    opacity: 0.8;
+}
+
+#china-panel-video {
+    opacity: 0.8;
+}
 
 .about-container {
     padding: 0 5%;
@@ -1190,6 +1217,11 @@ header .header-content .header-content-inner .video-subheading p {
     margin: 0 auto;
 }
 
+.about-right-column .about-strapline {
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
 @media(max-width:1400px) {
     
     .about-header {
@@ -1234,7 +1266,6 @@ header .header-content .header-content-inner .video-subheading p {
     
     .about-text-container {
         margin: 0;
-        height: 400px;
         position: relative;
         top: 70px;
         transform: translateY(0);
@@ -1255,16 +1286,6 @@ header .header-content .header-content-inner .video-subheading p {
         margin-top: 20px;
     }
     
-    .about-right-column p {
-        font-size: 14px;
-        line-height: 18px;
-    }
-    
-    .about-right-column p {
-        font-size: 14px;
-        line-height: 18px;
-    }
-    
     .about-header {
         font-size: 36px;
         line-height: 36px;
@@ -1283,6 +1304,13 @@ header .header-content .header-content-inner .video-subheading p {
         color: #969696;
         text-align: left;
         letter-spacing: 1px;
+    }
+
+    .about-strapline {
+        text-align: left !important;
+        font-size: 1.4em !important;
+        line-height: 1.3em !important;
+        padding-top: 0 !important;
     }
 
     .mobile-hide {
@@ -1478,6 +1506,7 @@ header .header-content .header-content-inner .video-subheading p {
     
     .service-section-header {
         width: 90%;
+        padding: 0 !important;
     }
 
 }
@@ -2084,7 +2113,8 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .service-button-shift {
-    margin-top: 5px;
+    margin: 5px auto;
+    text-align: center;
 }
 
 ::-moz-selection {
@@ -2445,19 +2475,19 @@ img::-moz-selection {
 
 .service-section-header {
     position: relative;
-    margin-top: 0;
+    margin: 0 auto;
+    padding: 50px 50px;
     z-index: 2;
+    max-width: 1000px;
+    top: 47%;
+    transform: translateY(-50%);
+    text-align: center;
+    /*background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;*/
 }
 
 .service-section-header .case-study-title {
     margin-bottom: 12px;
-}
-
-.home-pad {
-    margin-left: 5% !important;
-    margin-right: 5% !important;
-    margin-top: 6%;
-    padding: 0;
 }
 
 .cgi-shift {
@@ -2570,7 +2600,7 @@ img::-moz-selection {
 
 
 .section-description {
-    text-align: left;
+    text-align: center;
     font-family: 'din-condensed-web','Open Sans', Arial, sans-serif;
     font-size: 75px;
     line-height: 70px;
@@ -2585,7 +2615,6 @@ img::-moz-selection {
     font-size: 1.2em;
     line-height: 1.4em;
     font-weight: 300;
-    text-align: left;
 }
 
 .services-list {
@@ -2598,42 +2627,11 @@ img::-moz-selection {
         text-align: left;
     }
     
-    .service-section-header {
-        width: 700px;
-    }
-
-    .service-section-header-design .small {
-        width: 260px;
-    }
-
-    .service-section-header-photo .small {
-        width: 270px;
-    }
-
-    .service-section-header-video .small {
-        width: 290px;
-    }
-
-    .service-section-header-cgi .small {
-        width: 285px;
-    }
-    
-    .service-section-header-product .small {
-        width: 290px;
-    }
-    
-    .service-section-header-china .small {
-        width: 280px;
-    }
-    
 }
 
 
 @media(max-width:1400px) {
     
-    .service-section-header {
-        max-width: 500px;
-    }
 
     .blinds-2-go-logo {
         width: 340px;
@@ -2936,10 +2934,6 @@ img::-moz-selection {
     .small {
         font-size: 0.9em;
         margin-bottom: 10px;
-    }
-    
-    .service-button-shift {
-        margin-top: 5px;
     }
     
 }
