@@ -6916,6 +6916,22 @@ hr.light {
     border-width: 3px;
 }
 
+.cic-green-hr {
+    border-color: #219382;
+}
+
+.cic-indigo-hr {
+    border-color: #282D45 !important;
+}
+
+.cic-red-hr {
+    border-color: #C7004B;
+}
+
+.cic-yellow-hr {
+    border-color: #F3B633;
+}
+
 a {
     color: #2D83AA;
     -webkit-transition: all .35s;
@@ -7966,15 +7982,11 @@ header .header-content .header-content-inner .video-subheading p {
 }
 
 #design-panel-video {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #photo-panel-video {
-    opacity: 0.85;
-}
-
-#video-panel-video {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #cgi-panel-video {
@@ -7982,10 +7994,6 @@ header .header-content .header-content-inner .video-subheading p {
 }
 
 #product-panel-video {
-    opacity: 0.8;
-}
-
-#china-panel-video {
     opacity: 0.8;
 }
 
@@ -8069,6 +8077,7 @@ header .header-content .header-content-inner .video-subheading p {
 
 .about-text-container {
     max-width: 1010px;
+    text-align: center;
     margin: 0 auto;
     height: 420px;
     position: relative;
