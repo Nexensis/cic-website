@@ -94,20 +94,25 @@
             if ($('#page-top').hasClass('fp-viewing-service'))
                 $('.about-container').addClass('show'),
                 $('.header-content-inner').removeClass('show'),
+                $('.color-icons-nav .color-icon-service').addClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-design').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').removeClass('color-icon-border'),
                 $('.services-scroller').removeClass('hide'),
                 $('.service-section-header-design').removeClass('show')
                                 
             else if ($('#page-top').hasClass('fp-viewing-design'))
+                $('.color-icons-nav .color-icon-service').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-design').addClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').removeClass('color-icon-border'),
                 $('.services-scroller').removeClass('hide'),
                 $('.service-section-header-design').addClass('show'),
                 $('.service-section-header-photo').removeClass('show'),
@@ -118,11 +123,13 @@
                 $('.about-container').removeClass('show')
                 
             else if ($('#page-top').hasClass('fp-viewing-photo'))
+                $('.color-icons-nav .color-icon-service').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-photo').addClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-design').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').removeClass('color-icon-border'),
                 $('.services-scroller').removeClass('hide'),
                 $('.service-section-header-photo').addClass('show'),
                 $('.service-section-header-design').removeClass('show'),
@@ -133,11 +140,13 @@
                 $('.about-container').removeClass('show')
                 
             else if ($('#page-top').hasClass('fp-viewing-video'))
+                $('.color-icons-nav .color-icon-service').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-video').addClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-design').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').removeClass('color-icon-border'),
                 $('.services-scroller').removeClass('hide'),
                 $('.service-section-header-video').addClass('show'),
                 $('.service-section-header-photo').removeClass('show'),
@@ -147,11 +156,13 @@
                 $('.about-container').removeClass('show')
                 
             else if ($('#page-top').hasClass('fp-viewing-cgi'))
+                $('.color-icons-nav .color-icon-service').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').addClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-design').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').removeClass('color-icon-border'),
                 $('.services-scroller').removeClass('hide'),
                 $('.service-section-header-cgi').addClass('show'),
                 $('.service-section-header-photo').removeClass('show'),
@@ -162,11 +173,13 @@
                 $('.about-container').removeClass('show')
                 
             else if ($('#page-top').hasClass('fp-viewing-product'))
+                $('.color-icons-nav .color-icon-service').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-product').addClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
                 $('.color-icons-nav .color-icon-design').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').removeClass('color-icon-border'),
                 $('.services-scroller').removeClass('hide'),
                 $('.service-section-header-product').addClass('show'),
                 $('.service-section-header-photo').removeClass('show'),
@@ -179,16 +192,22 @@
                 $('.about-container').removeClass('show')
                 
             else if ($('#page-top').hasClass('fp-viewing-china'))
-                $('.services-scroller').addClass('hide'),
+                $('.color-icons-nav .color-icon-service').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-product').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-photo').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-video').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-cgi').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-design').removeClass('color-icon-border'),
+                $('.color-icons-nav .color-icon-china').addClass('color-icon-border'),
                 $('.service-section-header-china').addClass('show'),
-                $('#footer').removeClass('hide'),
                 $('.service-section-header-photo').removeClass('show'),
                 $('.service-section-header-video').removeClass('show'),
                 $('.service-section-header-cgi').removeClass('show'),
                 $('.service-section-header-design').removeClass('show'),
                 $('.service-section-header-product').removeClass('show'),
                 $('.header-content-inner').removeClass('show'),
-                $('.about-container').removeClass('show')
+                $('.about-container').removeClass('show'),
+                $('#footer').removeClass('hide')
                 
             else 
                 $('.header-content-inner').addClass('show'),

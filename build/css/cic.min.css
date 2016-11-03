@@ -7624,10 +7624,10 @@ aside {
     
 }
 
-.color-icon-about {
+.color-icon-service {
     width: 12px;
     height: 12px;
-    background-color: #ccc;
+    background-color: #ddd;
     border-radius: 10px;
     float: left;
     margin: 0 5px;
@@ -7673,6 +7673,15 @@ aside {
     width: 12px;
     height: 12px;
     background-color: #282D45;
+    border-radius: 10px;
+    float: left;
+    margin: 0 5px;
+}
+
+.color-icon-china {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
     border-radius: 10px;
     float: left;
     margin: 0 5px;
@@ -7991,10 +8000,6 @@ header .header-content .header-content-inner .video-subheading p {
     opacity: 0.9;
 }
 
-#cgi-panel-video {
-    opacity: 0.8;
-}
-
 #product-panel-video {
     opacity: 0.85;
 }
@@ -8009,7 +8014,7 @@ header .header-content .header-content-inner .video-subheading p {
 .services-scroller {
     position: fixed;
     bottom: 8%;
-    left: calc(50% - 68px);
+    left: calc(50% - 90px);
     padding: 10px;
     border-radius: 15px;
     z-index: 9999999;
@@ -8023,7 +8028,7 @@ header .header-content .header-content-inner .video-subheading p {
 .color-icons-nav {
     position: relative;
     height: 25px;
-    width: 120px;
+    width: 162px;
     padding-left: 4px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100px;
@@ -10119,6 +10124,7 @@ img::-moz-selection {
 #map {
     width: 100%;
     height: 500px;
+    margin-top: 20px;
 }
 
 @media(max-width:767px) {
@@ -10211,10 +10217,6 @@ img::-moz-selection {
     margin-top: 50px;
 }
 
-.contact-face {
-    position: relative;
-}
-
 .contact-icon {
     font-size: 2em;
 }
@@ -10264,10 +10266,29 @@ img::-moz-selection {
     margin-bottom: 30px;
 }
 
+#uk-faces {
+    margin-bottom: 30px;
+}
+
+#clients {
+    max-width: 1300px;
+    margin: 0 auto
+    ;
+    padding: 50px 0;
+}
+
 #client-list {
+    width: 90%;
     margin: 0 auto;
-    padding: 25px 0 50px 0;
-    max-width: 90%;
+}
+
+#testimonials > .case-study-section-quote {
+    margin-bottom: 10px;
+}
+
+#testimonials > hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 /*!
  * fullPage 2.8.1
