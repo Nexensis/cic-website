@@ -8000,10 +8000,6 @@ header .header-content .header-content-inner .video-subheading p {
     opacity: 0.9;
 }
 
-#product-panel-video {
-    opacity: 0.85;
-}
-
 .about-container {
     padding: 0 5%;
     position: relative;
@@ -9326,7 +9322,8 @@ img::-moz-selection {
     opacity: 0.85;
 }
 
-.grid {
+#aerobike-features-loop {
+    margin-bottom: -5px;
 }
 
 @media(max-width:1200px) {
@@ -9486,6 +9483,15 @@ img::-moz-selection {
     float: left;
 }
 
+.screwfix-logo {
+    width: 400px;
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    float: left;
+}
+
 .redefine-logo {
     width: 500px;
     text-align: left;
@@ -9580,6 +9586,10 @@ img::-moz-selection {
 
 .services-list {
     text-align: left !important;
+}
+
+#screwfix-brief {
+    padding-bottom: 0;
 }
 
 @media(min-width:768px) {

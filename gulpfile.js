@@ -33,19 +33,19 @@ gulp.task('html-include', function() {
 
 gulp.task('scripts', function() {
     return gulp.src('./source/js/*.js')
-        .pipe(changed('./build/js')) // Ignore unchanged files
+        .pipe(changed('./build/js/**/*')) // Ignore unchanged files
         .pipe(gulp.dest('./build/js/'));
 });
 
 gulp.task('assets', function() {
     return gulp.src('./source/img/**/*')
-        .pipe(changed('./build/img')) // Ignore unchanged files
+        .pipe(changed('./build/img/**/*')) // Ignore unchanged files
         .pipe(gulp.dest('./build/img'));
 });
 
 gulp.task('fonts', function() {
     return gulp.src('./source/fonts/**/*')
-        .pipe(changed('./build/fonts')) // Ignore unchanged files
+        .pipe(changed('./build/fonts/**/*')) // Ignore unchanged files
         .pipe(gulp.dest('./build/fonts'));
 });
 
