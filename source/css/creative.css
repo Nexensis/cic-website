@@ -3382,7 +3382,7 @@ img::-moz-selection {
 }
 
 #clients {
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
     width: 100%;
 }
 
@@ -3410,6 +3410,11 @@ img::-moz-selection {
     margin: 0;
 }
 
+#testimonials {
+    margin: 0;
+    width: 100%;
+}
+
 #testimonial {
     overflow: hidden;
     position: relative;
@@ -3417,6 +3422,10 @@ img::-moz-selection {
     max-width: 1000px;
     height: 230px;
     margin: 0 auto;
+}
+
+#testimonial .case-study-section-quote {
+    padding: 0 20px;
 }
 
 #testimonial div {
@@ -3432,19 +3441,27 @@ img::-moz-selection {
 
 #testimonialNavContainer {
     width: 100%;
-    margin: 0;
+    margin: 20px 0 0 0;
     display: block;
 }
 
 #testimonialNav {
-    width: 60px;
     margin: 0 auto;
+    width: 140px;
 }
 
 #testimonialNav div {
     cursor: pointer;
     float: left;
     padding: 10px;
+    width: 70px;
+    text-align: center;
+    font-size: 2em;
+    color: #aaa;
+}
+
+#testimonialNav div:hover {
+    background-color: #eee;
 }
 
 #testimonialNavNext {
