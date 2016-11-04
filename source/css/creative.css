@@ -3382,22 +3382,71 @@ img::-moz-selection {
 }
 
 #clients {
-    max-width: 1300px;
-    margin: 0 auto
-    ;
     padding: 50px 0;
+    width: 100%;
 }
 
-#client-list {
-    width: 90%;
+#clients .case-study-section {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
     margin: 0 auto;
 }
 
-#testimonials > .case-study-section-quote {
-    margin-bottom: 10px;
+#clients .case-study-section-paragraph {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-#testimonials > hr {
-    margin-top: 40px;
-    margin-bottom: 40px;
+#client-list {
+    width: 95%;
+    margin: 0 auto;
+    padding: 5px 25px;
+}
+
+#testimonialSlider {
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+#testimonial {
+    overflow: hidden;
+    position: relative;
+    width: 90%;    
+    max-width: 1000px;
+    height: 230px;
+    margin: 0 auto;
+}
+
+#testimonial div {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+#testimonial div p {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#testimonialNavContainer {
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+#testimonialNav {
+    width: 60px;
+    margin: 0 auto;
+}
+
+#testimonialNav div {
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+}
+
+#testimonialNavNext {
+    float: right;
 }
