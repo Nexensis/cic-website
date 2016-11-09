@@ -1,17 +1,5 @@
 <!-- Fullscreen.js custom JS -->
 
-    $(function() {
-            
-            var screenWidth = $(window).width();
-            
-            if (screenWidth <= 1024) { 
-                $('#main-panel-video').attr('poster', 'img/cic-showreel-loop-still-mobile.jpg');
-                $('#design-panel-video').attr('poster', 'img/portfolio/service-design/service-design-video-cover-mobile.jpg');
-                $('#photo-panel-video').attr('poster', 'img/portfolio/service-photo/service-photo-video-cover-mobile.jpg');
-                $('#cgi-panel-video').attr('poster', 'img/portfolio/service-cgi/cgi-section-cover-mobile.jpg');
-                $('#product-panel-video').attr('poster', 'img/portfolio/service-product/service-product-video-cover-mobile.jpg');
-            }
-    });
     
     $(function() {
                         
@@ -36,6 +24,7 @@
             } else {
                 $(navbarLogo);
                 $(navbarAffix);
+                $('video').remove();
             }
         });
         

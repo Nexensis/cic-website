@@ -7061,22 +7061,11 @@ button {
     }
 
     .section .full-panel {
-        display: none;
+        display: none !important;
     }
     
-    video .full-panel {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
+    .full-panel {
+        display: none !important;
     }  
     
     .inset video {
@@ -7895,6 +7884,18 @@ header .header-content .header-content-inner .video-subheading p {
 
 }
 
+@media(max-width:350px) {
+
+    .iphone-hide {
+        display: none;
+    }
+
+    .service-section-header {
+        transform: translateY(-43%) !important;
+    }
+
+}
+
 @media(min-width:768px) {
     
     header .header-content {
@@ -8417,9 +8418,7 @@ header .header-content .header-content-inner .video-subheading p {
         padding: 0 !important;
     }
 
-}
-    
-    
+}    
 
 @media(max-width:767px) {
 
@@ -9439,6 +9438,10 @@ img::-moz-selection {
     border: 2px solid white;*/
 }
 
+.service-section-header p {
+    text-align: center;
+}
+
 .service-section-header .case-study-title {
     margin-bottom: 12px;
 }
@@ -9789,6 +9792,36 @@ img::-moz-selection {
         margin-top: -50px;
     }
     
+    .section-description {
+        font-size: 34px; 
+        line-height: 32px;        
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .open-sans-italic {
+        color: #fff;
+        font-size: 14px;
+    }
+    
+    .about-strapline {
+        line-height: 16px !important;
+    }
+
+    .service-section-header {
+        text-align: left !important;
+    }
+
+    .service-section-header p {
+        text-align: left !important;
+    }
+
+    .grey-mobile {
+        color: #aaa;
+    }
+    
 }
 
 @media(max-width:500px) {
@@ -9977,15 +10010,7 @@ img::-moz-selection {
         margin-left: 25px;
         font-weight: 400;
     }
-    
-    .section-description {
-        font-size: 34px; 
-        line-height: 32px;        
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-weight: 400;
-    }
-    
+
     .section-title {       
         font-size: 50px;
         letter-spacing: 0px;
