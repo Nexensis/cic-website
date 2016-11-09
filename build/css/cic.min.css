@@ -7037,7 +7037,7 @@ button {
     background-color: #222;
     width: 100%;
     height: 100%;
-    z-index: 9999999;
+    z-index: 999;
     position: absolute;
 }
 
@@ -7052,6 +7052,48 @@ button {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     overflow: hidden;
+}
+
+.china-video-popup {
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#china-video-popup-close {
+    width: 180px;
+    height: 50px;
+    top: 50px;
+    right: calc(50% - 90px);
+    background-color: #2D83AA;
+    border: 2px white solid;
+    position: absolute;
+    z-index: 999999;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    display: none;
+}
+
+#china-video-popup-close:hover {
+    background-color: #fff;
+    border: 2px #2D83AA solid;
+    color: #2D83AA;
+}
+
+#china-video-popup-close .glyphicon {
+    padding: 0 0 0 4px;
 }
 
 @media(max-width:767px) {
@@ -7083,7 +7125,7 @@ video::-webkit-media-controls-start-playback-button {
 }
 
 .fp-completely {
-    z-index: 99999999;
+    z-index: 9999;
 }
 
 #full-screen-video {
@@ -7096,12 +7138,12 @@ video::-webkit-media-controls-start-playback-button {
 
 .video-close-holder {
     height: 0px;
-    z-index: 9999999;
+    z-index: 9999;
 }
 
 .full-screen-video-close {
     position: relative;
-    z-index: 9999999;
+    z-index: 9999;
     margin: 0 auto;
     text-align: right;
 }
@@ -8009,7 +8051,7 @@ header .header-content .header-content-inner .video-subheading p {
     left: calc(50% - 90px);
     padding: 10px;
     border-radius: 15px;
-    z-index: 9999999;
+    z-index: 9;
     background-color: rgba(255,255,255,0);
 
     -webkit-transition: all .8s;
@@ -8050,7 +8092,7 @@ header .header-content .header-content-inner .video-subheading p {
     padding-left: 5%;
     padding-bottom: 1%;
     padding-top: 1%;
-    z-index: 9999999;
+    z-index: 9;
     width: 100%;
 
     border-style: solid;

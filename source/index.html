@@ -6,6 +6,7 @@
     title="CIC | Branding, Design, Photography, CGI, Video and TV Advertising in Stoke on Trent">
 
     <!--Early-loading page-specific JS-->
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="js/jquery.fullPage.js"></script>    
     <script src="js/fullPage.custom.js"></script>    
 
@@ -29,6 +30,12 @@
         </div>
     </nav>
     
+    <button id="china-video-popup-close">CLOSE VIDEO <span class="glyphicon glyphicon-remove"></span></button>
+
+    <div class="china-video-popup">
+        <iframe class="embed-full-width-video" src="https://player.vimeo.com/video/190885934" frameborder="0"></iframe>
+    </div> 
+
     <div class="loading-screen"></div>
     
  <div id="fullpage">
@@ -109,8 +116,8 @@
                             <p>Experts at creating engaging content that sells products, it is our integrated approach that yields such effective results – results that capture the imagination our of clients, and retains their loyalty. With offices in the UK, Europe and China, we are the one stop solution for all your creative needs.</p>
 
                     </div> 
-                    <a href="portfolio.html#npd">
-                        <button class="btn btn-primary btn-med service-button-shift">READ: FROM CONCEPT TO MARKET</button>
+                    <a href="#design">
+                        <button class="btn btn-primary btn-med service-button-shift">READ MORE</button>
                     </a>
                 </div> 
             </div> 
@@ -240,10 +247,9 @@
         </div>  
     </div>
     
-    
     <div class="section">
         <div class="clearfix"></div>
-        <div class="full-page-video-holder china-section">     
+        <div class="full-page-video-holder china-section">   
             <video id="china-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-china/china-video-cover.jpg" data-setup="{}">
             <source src="img/portfolio/service-china/china-video-cover.mp4" type='video/mp4'>
             </video>                 
@@ -269,12 +275,11 @@
                 <hr class="mobile-hide">
                 <p class="small light">Sourcing product in China? We can fast track your product to market. From modelling your product to printing your packaging, CIC China complements the UK team every step of the way ensuring your marketing material is produced quickly and professionally reducing your time to market.</p> 
                 <p class="small light"><strong>Services:</strong> Design, Print Production and Logistics, CGI, Product Design, Print Quality Control</p>
-                <a href="portfolio.html#npd">
-                    <button class="btn btn-primary btn-med service-button-shift">WATCH THE VIDEO <span class="glyphicon glyphicon-play"></span></button>
-                </a>
+                <button id="china-video-popup-open" class="btn btn-primary btn-med service-button-shift">WATCH THE VIDEO <span class="glyphicon glyphicon-play"></span></button>
             </div>
         </div>
     </div>
+
 
     <include src="footer.html"></include>
 
