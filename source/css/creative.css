@@ -3007,7 +3007,7 @@ img::-moz-selection {
     }
 
     .case-study-description-screwfix {
-        margin-top: -10px;
+        margin-top: -22px;
         width: 300px;
     }
 
@@ -3249,7 +3249,7 @@ img::-moz-selection {
 .case-study-section-paragraph p {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 17px;
     margin: 0;    
 }
 
@@ -3294,8 +3294,8 @@ img::-moz-selection {
 
 
 .includes {
-    font-size: 0.7em !important;
-    line-height: 30px;
+    font-size: 0.8em !important;
+    line-height: 1.4em;
 }
 
 .embed-full-width-video-wrapper {
@@ -3351,7 +3351,7 @@ img::-moz-selection {
     .case-study-section-paragraph p {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 18px;  
+        font-size: 15px;  
     }
 
     .pad-top {
@@ -3600,6 +3600,7 @@ img::-moz-selection {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+    font-size: 20px;
 }
 
 #client-list {
@@ -3623,7 +3624,7 @@ img::-moz-selection {
     position: relative;
     width: 90%;    
     max-width: 1000px;
-    height: 230px;
+    height: 250px;
     margin: 0 auto;
 }
 
