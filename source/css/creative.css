@@ -414,6 +414,11 @@ section {
     overflow: hidden;
 }
 
+.spacer {
+    display: block;
+    margin: 25px 0;
+}
+
 #services {
     padding: 0 !important;
     z-index: 9999999999;
@@ -2578,6 +2583,10 @@ img::-moz-selection {
     max-width: 37%;
 }
 
+.case-study-header-med {
+    max-width: 30% !important;
+}
+
 .service-section-header {
     position: relative;
     margin: 0 auto;
@@ -2640,6 +2649,14 @@ img::-moz-selection {
 
 .aerobike-logo {
     width: 500px;
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.matalan-logo {
+    width: 400px;
     text-align: left;
     margin-left: 60px;
     margin-bottom: 30px;
@@ -2786,6 +2803,11 @@ img::-moz-selection {
         margin-bottom: 20px;
     }
     
+    .matalan-logo {
+        width: 340px;
+        margin-bottom: 20px;
+    }
+    
     .carmen-by-samantha-logo {
         width: 295px;
         margin-bottom: 20px;
@@ -2860,6 +2882,12 @@ img::-moz-selection {
 
     .aerobike-logo {
         width: 270px;
+        margin-left: 25px;
+        margin-bottom: 15px;
+    }
+
+    .matalan-logo {
+        width: 240px;
         margin-left: 25px;
         margin-bottom: 15px;
     }
@@ -2987,6 +3015,14 @@ img::-moz-selection {
     
     
     .aerobike-logo {
+        width: 200px;
+        margin-top: -50px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+    }
+    
+    
+    .matalan-logo {
         width: 200px;
         margin-top: -50px;
         margin-left: 25px;
@@ -3147,6 +3183,10 @@ img::-moz-selection {
         margin-top: 200px;
         z-index: 2;
         max-width: 60%;
+    }
+
+    .case-study-header-med {
+        max-width: 60% !important;
     }
 
     .case-study-title {       
