@@ -148,7 +148,7 @@ button {
     background-color: #222;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 9999999;
     position: absolute;
 }
 
@@ -1477,6 +1477,60 @@ header .header-content .header-content-inner .video-subheading p {
     vertical-align: middle;
 }
 
+/*SWIPER JS*/
+
+    #gallery {
+        height: 1000px;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+    .gallery-top {
+        height: 80%;
+        width: 100%;
+    }
+    .gallery-thumbs {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+    .gallery-thumbs .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+    }
+    .gallery-thumbs .swiper-slide-active {
+        opacity: 1;
+    }    
+
+    @media(min-width:1400px) {
+        #gallery {
+            height: 1200px;
+        }
+    }
+
+    @media(max-width:1024px) {
+        #gallery {
+            height: 800px;
+        }
+    }
+
+    @media(max-width:767px) {
+        #gallery {
+            height: 400px;
+        }
+    }
+
+/*---*/
+
 .service-design {
     height: 1000px;
 }
@@ -2634,6 +2688,14 @@ img::-moz-selection {
     float: left;
 }
 
+.atlas-logo {
+    width: 400px;
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    float: left;
+}
+
 .usana-logo {
     width: 100%;
     text-align: left;
@@ -2798,6 +2860,12 @@ img::-moz-selection {
     }
     
 
+    .atlas-logo {
+        width: 320px;
+        margin-bottom: 20px;
+    }
+    
+
     .aerobike-logo {
         width: 340px;
         margin-bottom: 20px;
@@ -2871,6 +2939,12 @@ img::-moz-selection {
     
     .blinds-2-go-logo {
         width: 270px;
+        margin-left: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .atlas-logo {
+        width: 260px;
         margin-left: 25px;
         margin-bottom: 15px;
     }
@@ -3014,6 +3088,13 @@ img::-moz-selection {
     }
     
     
+    .atlas-logo {
+        width: 200px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+    }
+    
+    
     .aerobike-logo {
         width: 200px;
         margin-top: -50px;
@@ -3109,6 +3190,12 @@ img::-moz-selection {
     
     .blinds-2-go {
         background-image: url(../img/portfolio/blinds2go/blinds2go-bedroom-cover.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+        
+    .atlas-vehicles {
+        background-image: url(../img/portfolio/atlas-vehicles/atlas-vehicles-case-study-cover-mobile.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -3463,6 +3550,10 @@ img::-moz-selection {
 }
 
 /* CONTACT */
+
+#new-business {
+    padding: 20px 0;
+}
 
 #map {
     width: 100%;

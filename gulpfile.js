@@ -25,9 +25,12 @@ gulp.task('watch', ['html-include', 'css', 'scripts', 'assets', 'fonts'], functi
     gulp.watch('./source/fonts/**/*', ['fonts']);
 });
  
-gulp.task('html-include', function() {
-    return gulp.src('./source/**/*.html')
-        .pipe(include())
+gulp.task('html-include', function() {    
+    return gulp.src(['./source/**/*.html', 
+                     '!./source/**/header.html', 
+                     '!./source/**/footer.html', 
+                     '!./source/**/nav.html']) // Ignores template files
+        .pipe(include())        
         .pipe(gulp.dest('./build/'));
 });
 

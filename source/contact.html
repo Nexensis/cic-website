@@ -100,10 +100,20 @@
     
     <section id="contact-page" class="no-padding top-margin"> 
         
-        <div class="col-lg-12 portfolio-top"><h1>CONTACT US</h1></div> 
+        <div class="col-lg-12 portfolio-top"><h1>CONTACT US</h1></div>      
 
-        <div class="clearfix"></div>        
+        <div class="clearfix"></div>
         
+        <section id="new-business">            
+            <div class="col-xs-12 centered">
+                <p>For all new business enquiries please contact Jon Hills</p>
+                <p>
+                    Email: <a id="jon-encoded-email-link"> <span id="jon-encoded-email"></span></a><br />
+                    Tel: <a href="tel:+447940390723">+44 (0) 7940 390 723</a>
+                </p>
+            </div>
+        </section>
+
         <div id="map"></div>
         
         <section id="contact-info">            
@@ -406,8 +416,8 @@
               link += (key.charAt(ltr))
             }
           }
-        var element = document.getElementById("email-link-rob-pearson");
-        var element1 = document.getElementById("email-address-rob-pearson");
+          var element = document.getElementById("email-link-rob-pearson");
+          var element1 = document.getElementById("email-address-rob-pearson");
           element.setAttribute("href", "mailto:"+link+"");
           element1.innerHTML = ""+link+"";
         }
@@ -438,8 +448,8 @@
               link += (key.charAt(ltr))
             }
           }
-        var element = document.getElementById("email-link-nicola-tayler");
-        var element1 = document.getElementById("email-address-nicola-tayler");
+          var element = document.getElementById("email-link-nicola-tayler");
+          var element1 = document.getElementById("email-address-nicola-tayler");
           element.setAttribute("href", "mailto:"+link+"");
           element1.innerHTML = ""+link+"";
         }
@@ -470,10 +480,14 @@
               link += (key.charAt(ltr))
             }
           }
-        var element = document.getElementById("email-link-jon-hills");
-        var element1 = document.getElementById("email-address-jon-hills");
+          var element = document.getElementById("email-link-jon-hills");
+          var element1 = document.getElementById("email-address-jon-hills");
+          var element2 = document.getElementById("jon-encoded-email");
+          var element3 = document.getElementById("jon-encoded-email-link");
           element.setAttribute("href", "mailto:"+link+"");
+          element3.setAttribute("href", "mailto:"+link+"");
           element1.innerHTML = ""+link+"";
+          element2.innerHTML = link;
         }
         
         //-->        
@@ -502,8 +516,8 @@
               link += (key.charAt(ltr))
             }
           }
-        var element = document.getElementById("email-link-david-walker");
-        var element1 = document.getElementById("email-address-david-walker");
+          var element = document.getElementById("email-link-david-walker");
+          var element1 = document.getElementById("email-address-david-walker");
           element.setAttribute("href", "mailto:"+link+"");
           element1.innerHTML = ""+link+"";
         }
