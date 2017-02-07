@@ -585,13 +585,6 @@ aside {
     text-decoration: none;
 }
 
-.affix {
-/*
-    -webkit-box-shadow:  0px 0px 20px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow:  0px 0px 20px 0px rgba(0,0,0,0.5);
-    box-shadow:  0px 0px 20px 0px rgba(0,0,0,0.5);
-*/
-}
 @media(max-width:767px) {
 
     .no-padding-mobile {
@@ -1474,7 +1467,6 @@ header .header-content .header-content-inner .video-subheading p {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    vertical-align: middle;
 }
 
 /*SWIPER JS*/
@@ -2818,6 +2810,11 @@ img::-moz-selection {
     text-align: center !important;
 }
 
+.carmen-by-samantha #case-study-header .case-study-description {
+    width: 800px;
+    max-width: 800px;
+}
+
 .case-study-description-container-swan {
     width: 650px;
 }
@@ -3131,6 +3128,10 @@ img::-moz-selection {
         margin-bottom: 5px;
         margin-top: 10px;
     }
+
+    .carmen-by-samantha #case-study-header .case-study-description {
+        width: 140px !important;
+    }
         
     .screwfix-logo {
         width: 220px;
@@ -3162,12 +3163,6 @@ img::-moz-selection {
         margin-bottom: 10px;
     }
 
-    .warwick-castle-logo {
-        width: 240px !important;
-        margin-left: 0 !important;
-        margin-bottom: 10px;
-    }
-
     .swan-logo {
         width: 110px;
         margin-left: 20px;
@@ -3181,9 +3176,10 @@ img::-moz-selection {
     }
     
     .warwick-castle-logo {
-        width:230px;
+        width:230px !important;
         margin-left: 25px;
         margin-top: 0px;
+        margin-bottom: 10px;
     }
 
     #case-study-header-large {
@@ -3251,7 +3247,7 @@ img::-moz-selection {
     }
     
     .ideal-shopping {
-        background-image: url(../img/portfolio/ideal-shopping/ideal-shopping-cover.jpg);
+        background-image: url(../img/portfolio/ideal-shopping/ideal-shopping-cover-mobile.jpg);
         background-size: cover;
         background-position: center;
     }
