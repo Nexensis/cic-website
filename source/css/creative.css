@@ -1525,7 +1525,7 @@ header .header-content .header-content-inner .video-subheading p {
 
     @media(max-width:767px) {
         #gallery {
-            height: 400px;
+            height: 340px;
         }
     }
 
@@ -2528,8 +2528,8 @@ img::-moz-selection {
     opacity: 0.85;
 }
 
-#aerobike-features-loop {
-    margin-bottom: -5px;
+.video-embed-margin {
+    margin-bottom: -7px;
 }
 
 @media(max-width:1200px) {
@@ -2697,16 +2697,11 @@ img::-moz-selection {
 }
 
 .usana-logo {
-    width: 100%;
+    max-width: 500px;
     text-align: left;
     margin-left: 60px;
     margin-bottom: 30px;
     float: left;
-}
-
-.case-study-description-usana {
-    width: 95% !important;
-    text-align: center !important;
 }
 
 .aerobike-logo {
@@ -2770,7 +2765,8 @@ img::-moz-selection {
 }
 
 .warwick-castle-logo {
-    width: 600px;
+    max-width: 600px !important;
+    width: 600px !important;
     text-align: left;
     margin-left: 50px;
     margin-bottom: 10px;
@@ -2793,11 +2789,7 @@ img::-moz-selection {
     float: left;
     margin-top: -10px;
 }
-
-.case-study-description-container-swan {
-    width: 650px;
-}
-    
+ 
 .case-study-title {
     text-align: left;
     font-family: 'din-condensed-web', 'Open Sans', Arial, sans-serif;
@@ -2814,8 +2806,27 @@ img::-moz-selection {
     font-size: 40px;
     margin-left: 55px;
     line-height: 48px;
+    max-width: 500px;
 }
 
+.atlas-vehicles .case-study-description {
+    max-width: 400px;
+}
+
+.case-study-description-usana {
+    width: 95% !important;
+    text-align: center !important;
+}
+
+.case-study-description-container-swan {
+    width: 650px;
+}
+
+.brother img {
+    margin-top: -40px !important;
+    width: 80%;
+}
+   
 .section-description {
     text-align: center;
     font-family: 'din-condensed-web','Open Sans', Arial, sans-serif;
@@ -2852,7 +2863,6 @@ img::-moz-selection {
 
 
 @media(max-width:1400px) {
-    
 
     .blinds-2-go-logo {
         width: 340px;
@@ -2901,7 +2911,7 @@ img::-moz-selection {
     }
 
     .warwick-castle-logo {
-        width: 440px;
+        width: 440px !important;
         margin-bottom: 10px;
     }
 
@@ -2916,6 +2926,10 @@ img::-moz-selection {
 
     .case-study-description-container-swan {
         width: 480px;
+    }
+
+    .atlas-vehicles .case-study-description {
+        max-width: 300px;
     }
 
     .case-study-title {       
@@ -2999,7 +3013,7 @@ img::-moz-selection {
     }
 
     .warwick-castle-logo {
-        width: 330px;
+        width: 330px !important;
         margin-left: 25px;
         margin-bottom: 5px;
     }
@@ -3124,7 +3138,7 @@ img::-moz-selection {
     }
 
     .case-study-description-screwfix {
-        margin-top: -22px;
+        margin-top: -10px;
         width: 300px;
     }
 
@@ -3149,8 +3163,8 @@ img::-moz-selection {
     }
 
     .warwick-castle-logo {
-        width: 240px;
-        margin-left: 0;
+        width: 240px !important;
+        margin-left: 0 !important;
         margin-bottom: 10px;
     }
 
@@ -3190,6 +3204,18 @@ img::-moz-selection {
     
     .blinds-2-go {
         background-image: url(../img/portfolio/blinds2go/blinds2go-bedroom-cover.jpg);
+        background-size: cover;
+        background-position: center;
+    }        
+    
+    .brother {
+        background-image: url(../img/portfolio/brother/brother-case-study-cover-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .matalan {
+        background-image: url(../img/portfolio/matalan/matalan-case-study-cover-mobile.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -3249,7 +3275,7 @@ img::-moz-selection {
     }
 
     .warwick-castle {
-        background-image: url(../img/portfolio/warwick-castle/warwick-castle-video-cover.jpg);
+        background-image: url(../img/portfolio/warwick-castle/warwick-castle-case-study-cover-mobile.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -3261,7 +3287,8 @@ img::-moz-selection {
     }
     
     .warwick-castle-shift {
-        margin-left: calc(15% - 25px);
+        margin-left: 0;
+        margin-top: 40px !important;
     }
 
     #case-study-header {
@@ -3274,6 +3301,10 @@ img::-moz-selection {
 
     .case-study-header-med {
         max-width: 60% !important;
+    }
+
+    .case-study-header-matalan {
+        margin-top: 15% !important;
     }
 
     .case-study-title {       
@@ -3551,10 +3582,6 @@ img::-moz-selection {
 
 /* CONTACT */
 
-#new-business {
-    padding: 20px 0;
-}
-
 #map {
     width: 100%;
     height: 500px;
@@ -3737,7 +3764,7 @@ img::-moz-selection {
 #client-list {
     width: 95%;
     margin: 0 auto;
-    padding: 5px 25px;
+    padding: 5px 25px 50px 25px;
 }
 
 #testimonialSlider {
@@ -3770,6 +3797,10 @@ img::-moz-selection {
         font-size: 1em;
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    
+    #contact-info div {
+        padding: 10px 0;
     }
 
 }
