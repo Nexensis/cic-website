@@ -420,11 +420,6 @@ section {
     overflow: hidden;
 }
 
-.spacer {
-    display: block;
-    margin: 25px 0;
-}
-
 #services {
     padding: 0 !important;
     z-index: 9999999999;
@@ -3469,7 +3464,7 @@ img::-moz-selection {
 }
 
 .spacer {
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
 .pad-left {
