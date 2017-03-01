@@ -137,8 +137,7 @@ button {
         text-align: center !important;
     }
 }
-
-
+  
 .wrapper {
     max-width: 1400px;
     margin: 0 auto;
@@ -2676,6 +2675,14 @@ img::-moz-selection {
     float: left;
 }
 
+.tower-packaging-logo {
+    width: 500px;
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    float: left;
+}
+
 .atlas-logo {
     width: 400px;
     text-align: left;
@@ -2863,6 +2870,12 @@ img::-moz-selection {
     }
     
 
+    .tower-packaging-logo {
+        width: 340px;
+        margin-bottom: 20px;
+    }
+    
+
     .atlas-logo {
         width: 320px;
         margin-bottom: 20px;
@@ -2945,6 +2958,13 @@ img::-moz-selection {
 @media(max-width:992px) {
     
     .blinds-2-go-logo {
+        width: 270px;
+        margin-left: 25px;
+        margin-bottom: 15px;
+    }
+    
+    
+    .tower-packaging-logo {
         width: 270px;
         margin-left: 25px;
         margin-bottom: 15px;
@@ -3094,7 +3114,13 @@ img::-moz-selection {
         margin-bottom: 5px;
     }
     
-    
+    .tower-packaging-logo {
+        width: 200px;
+        margin-left: 25px;
+        margin-bottom: 5px;
+        margin-top: -45px;
+    }
+        
     .atlas-logo {
         width: 200px;
         margin-left: 25px;
@@ -3274,6 +3300,12 @@ img::-moz-selection {
     
     .tower-health {
         background-image: url(../img/portfolio/tower-health/tower-health-mobile-bg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .tower-packaging {
+        background-image: url(../img/portfolio/tower-packaging/tower-packaging-case-study-cover-mobile.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -3494,7 +3526,7 @@ img::-moz-selection {
 }
     
 @media(max-width:992px) {
-    
+        
     .case-study-section {
         padding: 30px 25px;
         display: inline-block;
@@ -3554,7 +3586,7 @@ img::-moz-selection {
     } 
 
     .spacer {
-        margin-bottom: 50px;
+        margin-bottom: 25px;
     }
 
     .dr-bruce-logo {
