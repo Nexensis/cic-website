@@ -948,7 +948,7 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-color: #000;
+    background-color: #222;
     overflow: hidden;
     z-index: 999999;
 }
@@ -1329,6 +1329,7 @@ header .header-content .header-content-inner .video-subheading p {
         position: relative;
         top: 70px;
         transform: translateY(0);
+        text-align: left;
     }
 
     .about-left-column {
@@ -3102,6 +3103,11 @@ img::-moz-selection {
 
     .grey-mobile {
         color: #aaa;
+    }
+
+    #china-video-popup-open {
+        color: #2d83aa;
+        border-color: #2d83aa;
     }
     
 }

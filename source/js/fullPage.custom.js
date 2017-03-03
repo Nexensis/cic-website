@@ -3,22 +3,22 @@
 
 // China video popup/close
 
-// $(function() {
+$(function() {
 
-//     var iframe = document.querySelector('iframe');
-//     var player = new Vimeo.Player(iframe);
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
 
-//     $('#china-video-popup-open').click(function() {
-//         $('.china-video-popup').css({"display": "block"});
-//         $('#china-video-popup-close').css({"display": "block"});
-//         player.play();
-//     });
-//     $('#china-video-popup-close').click(function() {
-//         $('.china-video-popup').css({"display": "none"});
-//         $('#china-video-popup-close').css({"display": "none"});
-//         player.pause();
-//     });
-// });
+    $('#china-video-popup-open').click(function() {
+        $('.china-video-popup').css({"display": "block"});
+        $('#china-video-popup-close').css({"display": "block"});
+        player.play();
+    });
+    $('#china-video-popup-close').click(function() {
+        $('.china-video-popup').css({"display": "none"});
+        $('#china-video-popup-close').css({"display": "none"});
+        player.pause();
+    });
+});
 
 
 $(function() {
