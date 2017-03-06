@@ -11,7 +11,6 @@
     ogurl="http://www.ciconline.co.uk"    ogimage="http://www.ciconline.co.uk/img/portfolio/tower-packaging/tower-packaging-3pc-pan-set-best-3d.jpg">
 
     <!--Early-loading page-specific JS-->
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script src="js/fullPage.custom.js"></script>
 
@@ -286,15 +285,36 @@
     <include src="footer.html"></include>
 
     <!--Page-specific JS-->
-    <script src="js/typed.js"></script>
-    <script src="js/typed.custom.js"></script>    
-    <script src="js/creative-fullscreen.js"></script>   
+    <script async src="js/typed.js"></script>
+    <script async src="js/typed.custom.js"></script>    
+    <script async src="js/creative-fullscreen.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
 
     <!--Grey fade on load-->
     <script>
+
         $(document).ready(function(){ 
             $('.loading-screen').fadeOut(1000);
         });        
+        // China video popup/close
+
+        $(function() {
+
+            var iframe = document.querySelector('iframe');
+            var player = new Vimeo.Player(iframe);
+
+            $('#china-video-popup-open').click(function() {
+                $('.china-video-popup').css({"display": "block"});
+                $('#china-video-popup-close').css({"display": "block"});
+                player.play();
+            });
+            $('#china-video-popup-close').click(function() {
+                $('.china-video-popup').css({"display": "none"});
+                $('#china-video-popup-close').css({"display": "none"});
+                player.pause();
+            });
+        });
     </script>
 
 </html>
