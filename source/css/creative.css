@@ -3844,6 +3844,8 @@ img::-moz-selection {
 
 .about-approach {
     padding: 35px 15px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .about-approach h2 {
@@ -3878,12 +3880,11 @@ img::-moz-selection {
 }
 
 .concept-to-market-text {
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 40px 5% 50px 5%;
 }
 
 .about-services-block {
-    min-height: 360px;
+    min-height: 360px;    
     width: 20%;
     float: left;
     margin: 0;
@@ -3903,6 +3904,10 @@ img::-moz-selection {
 
 .about-services-block button {
     font-size: 12px;
+}
+
+.about-studio-images {
+    margin: 0;
 }
 
 .about-services-block li {
@@ -3942,4 +3947,140 @@ img::-moz-selection {
     padding-top: 40px;
     padding-bottom: 40px;
     font-weight: 300;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.call-to-action {
+    text-align: center;
+    background-color: #eee;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.call-to-action-text {
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.call-to-action button {
+    background-color: #eee;
+    color: #333;
+    border-color: #333;
+    margin: 0 10px;
+    text-decoration: none !important;
+}
+
+.call-to-action button:hover {
+    text-decoration: none !important;
+    color: #fff;
+    background-color: #2D83AA; 
+}
+
+.call-to-action a:hover {
+    text-decoration: none !important;
+}
+
+@media(max-width:1400px) {
+    #about-header {
+        max-height: 600px;
+    }
+
+    .einstein-quote {
+        font-size: 42px;
+        max-width: 500px;
+        margin-top: -20px;
+    }
+
+    .about-intro h2 {
+        font-size: 20px;
+        max-width: 700px;
+    }
+
+    .about-services-block {
+        min-height: 310px;
+    }
+
+    .about-services-block h3 {
+        font-size: 24px;
+    }
+
+    .about-services-block li {
+        font-size: 16px;
+    }
+
+    .about-services-block button {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: 992px) {
+
+    .about-services-block {
+        min-width: 33.333%;
+    }
+
+    .about-services-block-photography {
+        min-width: 50%;
+    }
+
+    .about-services-block-npd {
+        min-width: 50%;
+    }
+
+    #about-header {
+        max-height: 500px;
+    }
+    
+}
+
+@media(max-width: 768px) {
+
+    #about-header {
+        max-height: 300px;
+    }
+
+    .about-intro h2 {
+        font-size: 16px;
+        max-width: 700px;
+    }
+
+    .about-approach {
+        padding: 20px 5%;
+    }
+
+    .about-approach-text-right {
+        margin-top: 0;
+    }
+
+    .about-services-block {
+        min-width: 100%;
+    }
+
+    .einstein-quote {
+
+        font-size: 24px;
+    }
+    
+    .concept-to-market {
+        padding-top: 20px;
+    }
+    
+    .concept-to-market-text {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .fast-track-packaging-text {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .fast-track-packaging {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
 }
