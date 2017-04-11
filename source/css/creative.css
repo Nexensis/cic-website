@@ -73,6 +73,10 @@ h6 {
     text-transform: uppercase;
 }
 
+h1 {
+    font-size: 48px;
+}
+
 h2 {
     font-size: 3em;
 }
@@ -1930,7 +1934,7 @@ header .header-content .header-content-inner .video-subheading p {
 
 .footer-container {
     height: auto;
-    background-color: #2D85AB;
+    background-color: #222841;
 }
 
 .footer-text {
@@ -1948,6 +1952,37 @@ header .header-content .header-content-inner .video-subheading p {
     letter-spacing: 3px !important;
     float: right;
     margin: -7px 0 0 20px !important;
+}
+
+.site-map {
+    background-color: #2D83AA;
+    color: #ffffff;
+    font-weight: 300;
+    padding: 10px 0 15px 0;
+}
+
+.site-map a {
+    color: #ffffff;
+}
+
+.site-map h3 {
+    margin-bottom: 20px;
+}
+
+.site-map li {
+    display: inline-block;
+    float: left;
+    clear: left;
+    list-style: none;
+    padding: 3px 0;
+}
+
+.site-map ul {
+    padding-left: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+    float: left;
+    clear: left;
 }
 
 @media(max-width: 767px) {
@@ -3653,7 +3688,7 @@ img::-moz-selection {
 }
 
 #clients {
-    padding: 50px 0 20px 0;
+    padding: 50px 0 0 0;
     width: 100%;
 }
 
@@ -3683,9 +3718,11 @@ img::-moz-selection {
 }
 
 #client-list {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
-    padding: 5px 25px 50px 25px;
+    padding: 25px 5% 30px 5%;
+    margin-top: 20px;
+    background-color: #eeeeee;
 }
 
 #testimonialSlider {
@@ -3768,4 +3805,141 @@ img::-moz-selection {
 
 #testimonialNavNext {
     float: right;
+}
+
+#about-header {
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+#about-header .video-wrapper {
+    height: 800px;
+    overflow: hidden;
+}
+
+#about-header .video-wrapper video {
+    z-index: 0 !important;
+    margin-top: -10% !important;
+    min-width: 100%;
+    min-height: 800px;
+    float: center;
+}
+
+.about-intro {
+    background-color: #2d83aa; 
+    padding: 20px 15px 25px 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-intro h2 {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.4em;
+    text-transform: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-approach {
+    padding: 35px 15px;
+}
+
+.about-approach h2 {
+    text-align: center;
+}
+
+.about-approach .color-icons {
+    margin-top: 20px;
+}
+
+.about-approach-text {
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.about-approach-text-right {
+    margin-top: 40px;
+}
+
+.einstein-quote {
+    font-size: 48px;
+    font-style: italic;
+    max-width: 500px;
+    margin-top: -20px;
+}
+
+.concept-to-market {
+    padding-top: 50px;
+    padding-bottom: 0;
+    text-align: center;
+    font-weight: 300;
+}
+
+.concept-to-market-text {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.about-services-block {
+    min-height: 360px;
+    width: 20%;
+    float: left;
+    margin: 0;
+    color: #fff;
+    padding: 10px;
+}
+
+.about-services-block h3 {
+   font-size: 32px;
+   margin-bottom: 20px;
+}
+
+.about-services-block ul {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.about-services-block button {
+    font-size: 12px;
+}
+
+.about-services-block li {
+   font-size: 20px;
+    font-family: 'din-condensed-web','Helvetica Neue',Arial,sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    list-style: none;
+}
+
+.about-services-block-design {
+    background-color: #2D83AA;
+}
+
+.about-services-block-photography {
+    background-color: #282D45;
+}
+
+.about-services-block-video {
+    background-color: #219382;
+}
+
+.about-services-block-cgi {
+    background-color: #C7004B;
+}
+
+.about-services-block-npd {
+    background-color: #F3B633;
+}
+
+.fast-track-packaging {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.fast-track-packaging-text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-weight: 300;
 }
