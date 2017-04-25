@@ -74,7 +74,7 @@ h6 {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 60px;
 }
 
 h2 {
@@ -128,9 +128,18 @@ button {
 }
 
 @media(max-width:767px) {
-    
+        
+    h1 {
+        font-size: 32px;
+    }
+
     h2 {
         font-size: 2em;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 1.3em;
     }
     
     .right-align-desktop {
@@ -140,6 +149,7 @@ button {
     .center-mobile {
         text-align: center !important;
     }
+
 }
   
 .wrapper {
@@ -162,16 +172,22 @@ button {
 }
 
 .full-panel {
-    position: absolute;
-    top: 50%;
+    position: relative;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     overflow: hidden;
+    min-height: 100vh;
+    clear: both;
+}
+
+.main-panel-video-wrapper {
+    overflow: hidden;
+    height: 100vh;
 }
 
 .china-video-popup {
@@ -424,11 +440,25 @@ section {
 }
 
 #services {
-    padding: 0 !important;
-    z-index: 9999999999;
+    display: block;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 10px 5% 35px 5%;
 }
 
+#services h3 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    text-transform: none;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
 
+.what-we-do {
+    padding: 30px 5%;
+    text-align: center;
+}
 
 aside {
     padding: 50px 0;
@@ -719,29 +749,28 @@ aside {
     color: #fff;
 }
 
+.color-rollover {
+    text-decoration: none !important;
+}
+
 .color-rollover-design:hover {
     color: #2D83AA !important;
-    text-decoration: none;
 }
 
 .color-rollover-photo:hover {
     color: #282D45 !important;
-    text-decoration: none;
 }
 
 .color-rollover-video:hover {
     color: #219382 !important;
-    text-decoration: none;
 }
 
 .color-rollover-cgi:hover {
     color: #C7004B !important;
-    text-decoration: none;
 }
 
 .color-rollover-product:hover {
     color: #F3B633 !important;
-    text-decoration: none;
 }
 
 .color-design {
@@ -858,17 +887,16 @@ aside {
 .page-scroller-holder {
     position: absolute;
     top: 93%;
-    margin-bottom: -1px;
     background-color: rgba(0,0,0,0);
 }
 
 .page-scroller {    
     position: absolute;
+    left: 49%;
     z-index: 999;
     border: 0px;
     font-size: 1.6em !important;
-    padding: 5px 7px 0px 14px !important;
-    margin-left: -25px;
+    padding: 5px 7px 0px 5px !important;
     opacity: 0.6;
 }
 
@@ -936,6 +964,7 @@ aside {
 .section {
     overflow: hidden;
     overflow-y: hidden;
+    clear: both;
 }
 
 .fp-tableCell {
@@ -952,7 +981,7 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-color: #222;
+    background-color: #444;
     overflow: hidden;
     z-index: 999999;
 }
@@ -1035,6 +1064,7 @@ header .header-content .header-content-inner .video-subheading p {
     header .header-content {
         padding-left: 10%;
         padding-right: 10%;
+        left: 0;
     }
 
 }
@@ -1057,6 +1087,8 @@ header .header-content .header-content-inner .video-subheading p {
         position: absolute;
         top: 50%;
         padding: 0 50px;
+        width: 100%;
+        left: 0;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -3688,7 +3720,7 @@ img::-moz-selection {
 }
 
 #clients {
-    padding: 50px 0 0 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -3720,9 +3752,13 @@ img::-moz-selection {
 #client-list {
     width: 100%;
     margin: 0 auto;
-    padding: 25px 5% 30px 5%;
+    padding: 25px 5% 60px 5%;
     margin-top: 20px;
     background-color: #eeeeee;
+}
+
+#client-list .case-study-section {
+    margin-top: 20px;
 }
 
 #testimonialSlider {
@@ -3826,8 +3862,8 @@ img::-moz-selection {
 }
 
 .about-intro {
-    background-color: #2d83aa; 
-    padding: 20px 15px 25px 15px;
+    background-color: #fff; 
+    padding: 55px 15px 0px 15px;
     color: #fff;
     text-align: center;
 }
@@ -3840,6 +3876,7 @@ img::-moz-selection {
     text-transform: none;
     max-width: 900px;
     margin: 0 auto;
+    color: #333;
 }
 
 .about-approach {
@@ -3874,6 +3911,13 @@ img::-moz-selection {
 
 .concept-to-market {
     padding-top: 50px;
+    padding-bottom: 0;
+    text-align: center;
+    font-weight: 300;
+}
+
+.home-services-list {
+    padding-top: 0;
     padding-bottom: 0;
     text-align: center;
     font-weight: 300;
@@ -3951,6 +3995,18 @@ img::-moz-selection {
     padding-right: 5%;
 }
 
+.what-we-do-text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-weight: 300;
+    max-width: 720px;
+}
+
+.what-we-do-text p {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
 .call-to-action {
     text-align: center;
     background-color: #eee;
@@ -3962,17 +4018,27 @@ img::-moz-selection {
     font-weight: 300;
     margin-top: 30px;
     margin-bottom: 10px;
+    padding: 0 5%;
 }
 
 .call-to-action button {
-    background-color: #eee;
+    background-color: none;
     color: #333;
     border-color: #333;
-    margin: 0 10px;
+    margin: 10px;
     text-decoration: none !important;
 }
 
-.call-to-action button:hover {
+.on-white {
+    background-color: none;
+    color: #333;
+    border-color: #333;
+    margin: 50px 0 0 0;
+    text-decoration: none !important;
+}
+
+.call-to-action button:hover,
+.on-white:hover {
     text-decoration: none !important;
     color: #fff;
     background-color: #2D83AA; 
@@ -4057,8 +4123,16 @@ img::-moz-selection {
 
     .about-services-block {
         min-width: 100%;
+        min-height: 360px;
     }
 
+    .about-services-block h3 {
+        font-size: 32px;
+    }
+
+    .about-services-block li {
+        font-size: 20px;
+    }
     .einstein-quote {
 
         font-size: 24px;

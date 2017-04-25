@@ -10,50 +10,24 @@
     ogdescription="The full-service creative agency with in-house design, photography, CGI, video, packaging and print teams."
     ogurl="http://www.ciconline.co.uk"    ogimage="http://www.ciconline.co.uk/img/portfolio/tower-packaging/tower-packaging-3pc-pan-set-best-3d.jpg">
 
-    <!--Early-loading page-specific JS-->
-    <script src="js/jquery.fullPage.js"></script>
-    <script src="js/fullPage.custom.js"></script>
-
 </include>
 
 <body id="page-top">
     
-    <include src="nav.html"><div class="main-logo-white"></div></include> 
-        
-    <nav id="servicesScroller">
-        <div class="services-scroller hide">
-            <div class="color-icons-nav">
-                <a href="#service"><div class="color-icon color-icon-service"></div></a>
-                <a href="#design"><div class="color-icon color-icon-design"></div></a>
-                <a href="#photo"><div class="color-icon color-icon-photo"></div></a>
-                <a href="#video"><div class="color-icon color-icon-video"></div></a>
-                <a href="#cgi"><div class="color-icon color-icon-cgi"></div></a>
-                <a href="#product"><div class="color-icon color-icon-product"></div></a>
-                <a href="#china"><div class="color-icon color-icon-china"></div></a>
-            </div>
-        </div>
-    </nav>
-    
-    <button id="china-video-popup-close">CLOSE VIDEO <span class="glyphicon glyphicon-remove"></span></button>
-
-    <div class="china-video-popup">
-        <iframe class="embed-full-width-video" src="https://player.vimeo.com/video/206434217" frameborder="0"></iframe>
-    </div> 
-
-    <div class="loading-screen"></div>
-    
- <div id="fullpage">
+    <include src="nav.html"><div class="main-logo-white" id="main-logo-home"></div></include> 
      
-     <div class="section active fp-completely">
-        <header>
+     <div class="section" id="main">
+         <header>
             <div class="col-xs-12 page-scroller-holder">
                 <div class="page-scroller-button">
-                    <a href="#service" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
+                    <a href="#services" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
                 </div>
             </div>
-            <video id="main-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/cic-showreel-loop-main-still.jpg" data-setup="{}">
-            <source src="img/cic-showreel-loop-v4.mp4" type='video/mp4'>
-            </video>
+            <div class="main-panel-video-wrapper">
+                <video id="main-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/cic-showreel-loop-main-still.jpg" data-setup="{}">
+                <source src="img/cic-showreel-loop-v4.mp4" type='video/mp4'>
+                </video>
+            </div>
             <div class="header-content">
                 <div class="header-content-inner">
                     <img src="img/cic-logo-white.svg" class="home-logo">                
@@ -62,11 +36,11 @@
 
                     <div class="video-subheading uppercase">
                         <p>
-                            <a href="#design" class="color-rollover-design">Design.</a>
-                            <a href="#photo" class="color-rollover-photo">Photography.</a>
-                            <a href="#video" class="color-rollover-video">Video.</a>
-                            <a href="#cgi" class="color-rollover-cgi">CGI.</a>
-                            <a href="#product" class="color-rollover-product">Product Design.</a>
+                            <a href="portfolio.html#design" class="color-rollover color-rollover-design">Design.</a>
+                            <a href="portfolio.html#photography" class="color-rollover color-rollover-photo">Photography.</a>
+                            <a href="portfolio.html#video" class="color-rollover color-rollover-video">Video.</a>
+                            <a href="portfolio.html#cgi" class="color-rollover color-rollover-cgi">CGI.</a>
+                            <a href="portfolio.html#npd" class="color-rollover color-rollover-product">Product Design.</a>
                         </p>
                     </div>
                     <a href="portfolio.html">
@@ -80,207 +54,301 @@
                         <div class="color-icon-photo"></div>
                     </div>
                 </div>
-            </div> 
-        </header>
-
-         
-     </div>
-
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder about-section">            
-            <div class="col-xs-12 page-scroller-holder">
-                <div class="page-scroller-button">
-                    <a href="#design" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
-                </div>
-            </div>
-            <video id="about-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-about/about-section-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-about/about-section-cover.mp4" type='video/mp4'>
-            </video>
-            <div class="about-container">
-                <div class="about-text-container">
-                    <div class="col-xs-12 about-left-column no-padding">
-                        <p class="about-header">
-                            The <span class="cic-blue-mobile">full-service</span> <br />
-                            Integrated creative agency
-                            <hr class="mobile-hide">
-                        </p>   
-                    </div>  
-                    <div class="col-xs-12 no-padding about-right-column">
-                        <p class="about-strapline">
-                            <span class="open-sans-italic grey-mobile">
-                                    With design, imagery, video and editorial teams 
-                                <span class="white-text cic-blue-mobile"> 
-                                    all under one roof.<br />
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="col-xs-12 about-right-column">
-                            <p>Experts at creating engaging content that sells products, our integrated approach yields effective results – capturing the imagination of our clients and retaining their loyalty. With offices in the UK, Europe and China, we are the one stop solution for all your creative needs.</p>
-
-                    </div> 
-                </div> 
-            </div> 
-        </div>
+            </div>              
+         </header>
+    </div>
+     
+     <div class="section" id="services">
+         <h1>THE FULL-SERVICE INTEGRATED CREATIVE AGENCY</h1>
+         <h3>With design, imagery, video, digital and editorial teams all under one roof.</h4>
+        <a href="about.html">
+            <button class="btn btn-primary btn-sm page-scroll">ABOUT US</button>
+        </a>
     </div>
 
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder design-section">            
-            <div class="col-xs-12 page-scroller-holder">
-                <div class="page-scroller-button">
-                    <a href="#photo" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
-                </div>
-            </div>
-            <video id="design-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-design/design-section-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-design/design-section-cover.mp4" type='video/mp4'>
-            </video>
-            <div class="service-section-header service-section-header-design">
-                <p class="section-description din-uppercase light">Design makes<br />everything possible</p> 
-                <hr class="mobile-hide">
-                <span class="about-right-column">
-                    <p class="about-strapline">
-                        <span class="open-sans-italic">
-                                Einstein once said:<br />"Imagination is more important than knowledge."
-                        </span>
-                    </p>
-                </span>
-                <p class="small light">At CIC we believe that both imagination and knowledge are equally important.<span class="iphone-hide"> Whilst imagination allows us to develop unique solutions, it is our knowledge that informs us what will work.</span> Our understanding of upcoming trends, the latest technological advances and awareness of the client’s needs ensures that every solution – no matter how imaginative – will be perfect for you, your business and your market.</p> 
-                <p class="small light"><strong>Services:</strong> Branding, Advertising, Packaging, Editorial, Illustration, Digital &amp; Web</p> 
+    <section class="home-services-list">
+
+        <div>
+            <div class="about-services-block about-services-block-design">
+                <h3>Design</h3>
+                <ul>
+                    <li>BRANDING</li>
+                    <li>ADVERTISING</li>
+                    <li>MARKETING STRATEGY</li>
+                    <li>PACKAGING</li>
+                    <li>EDITORIAL</li>
+                    <li>ILLUSTRATION</li>
+                    <li>DIGITAL</li>
+                </ul>
                 <a href="portfolio.html#design">
-                    <button class="btn btn-primary btn-med service-button-shift centered">DESIGN PROJECTS</button>
+                    <button class="btn btn-primary btn-sm">Design Projects</button>
+                </a>
+            </div>
+
+            <div class="about-services-block about-services-block-video">
+                <h3>Video</h3>
+                <ul>
+                    <li>LIVE ACTION</li>
+                    <li>PRODUCT DEMO</li>
+                    <li>PRESENTER</li>
+                    <li>DIRECT RESPONSE</li>
+                    <li>CG ANIMATION </li>
+                    <li>CORPORATE</li>
+                    <li>CONFERENCING</li>
+                </ul>
+                <a href="portfolio.html#video">
+                    <button class="btn btn-primary btn-sm btn-video">Video Projects</button>
+                </a>
+            </div>
+
+            <div class="about-services-block about-services-block-cgi">
+                <h3>CGI</h3>
+                <ul>
+                    <li>INTERIOR</li>
+                    <li>PRODUCT</li>
+                    <li>ARCHITECTURAL</li>
+                    <li>AUTOMOTIVE</li>
+                    <li>3D VISUALISATION</li>
+                    <li>3D MODELLING</li>
+                    <li>ANIMATION</li>
+                </ul>
+                <a href="portfolio.html#cgi">
+                    <button class="btn btn-primary btn-sm btn-cgi">CGI Projects</button>
+                </a>
+            </div>
+
+            <div class="about-services-block about-services-block-photography">
+                <h3>Photography</h3>
+                <ul>
+                    <li>PACKSHOT </li>
+                    <li>LIFESTYLE</li>
+                    <li>E-COMMERCE</li>
+                    <li>FASHION</li>
+                    <li>FOOD</li>
+                    <li>LOCATION</li>
+                    <li>MODEL</li>
+                </ul>
+                <a href="portfolio.html#photography">
+                    <button class="btn btn-primary btn-sm btn-photography">Photography Projects</button>
+                </a>
+            </div>
+
+            <div class="about-services-block about-services-block-npd">
+                <h3>Product Design</h3>
+                <ul>
+                    <li>CONCEPT DESIGN</li>
+                    <li>IDEATION SKETCHING</li>
+                    <li>3D VISUALISATION</li>
+                    <li>MARKET ANALYSIS</li>
+                    <li>TREND REPORTS</li>
+                    <li>CAD PRODUCTION FILES</li>
+                    <li>FACTORY LIASION</li>
+                </ul>
+                <a href="portfolio.html#npd">
+                    <button class="btn btn-primary btn-sm btn-product">NPD Projects</button>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="what-we-do">
+
+        <div class="row wrapper">
+            <h2 class="centered">WHAT WE DO</h2>
+            <div class="color-icons">
+                <div class="color-icon-design"></div>
+                <div class="color-icon-video"></div>
+                <div class="color-icon-product"></div>
+                <div class="color-icon-cgi"></div>
+                <div class="color-icon-photo"></div>
+            </div>
+        </div>
+
+        <div class="row wrapper what-we-do-text">
+            <p class="centered">A multi-disciplinary studio of designers, image makers, thinkers and storytellers. 
+            We are experts at creating engaging content that sells products. 
+            </p>
+        </div>
+
+        <div class="grid wrapper">
+
+            <div class="element-item col-lg-4 col-md-4 col-sm-6 col-xs-12 design cgi npd" title="Atlas Vehicles, Branding, Vehicle Development and Website Development"> 
+                <a class="portfolio-link" href="portfolio/atlas-vehicles.html">
+                    <div class="portfolio-text-overlay">
+                        <div class="portfolio-text-overlay-title">Branding, Imagery &amp; Web<br></div>
+                        <div class="portfolio-text-overlay-client">Atlas Vehicles</div>
+                    </div> 
+                    <img class="portfolio-img" src="img/portfolio/covers/atlas-vehicles.jpg" alt="Atlas Vehicles, Branding, Vehicle Development and Website Development">   
+                </a>
+            </div>
+
+            <div class="element-item col-lg-4 col-md-4 col-sm-6 col-xs-12 design photography video" title="Tower Health Branding, Packaging and Photography"> 
+                <a class="portfolio-link" href="portfolio/tower-packaging.html">
+                    <div class="portfolio-text-overlay">
+                        <div class="portfolio-text-overlay-title">Tower Packaging Relaunch<br></div>
+                        <div class="portfolio-text-overlay-client">Tower Housewares</div>
+                    </div> 
+                    <img class="portfolio-img" src="img/portfolio/covers/tower-packaging.jpg" alt="Tower Branding, Packaging, and Photography">   
+                </a>
+            </div>
+
+            <div class="element-item col-lg-4 col-md-4 col-sm-6 col-xs-12 design photography cgi video npd" title="USANA Branding, Packaging, Product Development, Video and Website">                
+                <a class="portfolio-link" href="portfolio/usana.html">
+                    <div class="portfolio-text-overlay">
+                        <div class="portfolio-text-overlay-title">Launch Campaign<br></div>
+                        <div class="portfolio-text-overlay-client">USANA</div>
+                    </div> 
+                    <img class="portfolio-img" src="img/portfolio/covers/usana.jpg" alt="USANA Branding, Packaging, Product Development, Video and Website">  
                 </a>
             </div>
             
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder photo-section">            
-            <div class="col-xs-12 page-scroller-holder">
-                <div class="page-scroller-button">
-                    <a href="#video" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
-                </div>
-            </div>
-            <video id="photo-panel-video" class="full-panel" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-photo/service-photo-video-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-photo/service-photo-video.mp4" type='video/mp4'>
-            </video>
-            <div class="service-section-header service-section-header-photo">
-                <p class="section-description din-uppercase light">Pixel perfect<br />commercial photography</p> 
-                <hr class="mobile-hide cic-indigo-hr">
-                <p class="small light">With a 3500ft<sup>2</sup> custom-built studio and industry standard equipment, we offer an unprecedented amount of creative space all under one roof. Experienced in e-commerce, lifestyle, food, fashion and packshot photography, we endeavour to create visually striking content for all commercial platforms.</p> 
-                <p class="small light"><strong>Services:</strong> Packshot, Lifestyle, Fashion, Food, Location, Model</p>
-                <a href="portfolio.html#photography">
-                    <button class="btn btn-primary btn-med btn-photography service-button-shift">PHOTOGRAPHY PROJECTS</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder video-section">            
-            <div class="col-xs-12 page-scroller-holder">
-                <div class="page-scroller-button">
-                    <a href="#cgi" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
-                </div>
-            </div>
-            <video id="video-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-video/service-video-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-video/service-video-cover.mp4" type='video/mp4'>
-            </video>
-            <div class="service-section-header service-section-header-video">
-                <p class="section-description din-uppercase light">Engaging, captivating,<br />informative video</p> 
-                <hr class="mobile-hide cic-green-hr">
-                <p class="small light">Everything that we produce is created with the sole purpose of telling a story, never more so than with video. From  product demonstrations to TV campaigns, motion graphics to live action video, our expert team offers full green screen capability, CG animation and location shoots along side our purpose built video studios.</p> 
-                <p class="small light"><strong>Services:</strong> Live Action, Product Demo, Presenter, DRTV, CG Animation, Corporate</p>
-                <a href="portfolio.html#video">
-                    <button class="btn btn-primary btn-med btn-video service-button-shift">VIDEO PROJECTS</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder cgi-section">            
-            <div class="col-xs-12 page-scroller-holder">
-                <div class="page-scroller-button">
-                    <a href="#product" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
-                </div>
-            </div>
-            <video id="cgi-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-cgi/cgi-section-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-cgi/cgi-section-cover.mp4" type='video/mp4'>
-            </video>
-            <div class="service-section-header service-section-header-cgi">
-                <p class="section-description din-uppercase light">Oustanding, computer <br />generated visual content</p> 
-                <hr class="mobile-hide cic-red-hr">
-                <p class="small light">Developing stunning, photorealistic 3D visuals, our team of experienced and talented 3D creatives are forever pushing the boundaries of computer generated imagery. From the smallest component, right up to full-blown architectural masterpieces; a broad spectrum of industries benefit from our CG skills.</p> 
-                <p class="small light"><strong>Services:</strong> 3D Modelling, Visualisation, Interior, Product, Architecture, Animation</p>
-                <a href="portfolio.html#cgi">
-                    <button class="btn btn-primary btn-med btn-cgi service-button-shift">CGI PROJECTS</button>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder product-section">            
-            <div class="col-xs-12 page-scroller-holder">
-                <div class="page-scroller-button">
-                    <a href="#china" class="btn btn-primary btn-xl page-scroll page-scroller"><span class="glyphicon glyphicon-menu-down"></span></a>
-                </div>
-            </div>
-            <video id="product-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-product/npd-section-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-product/npd-section-cover.mp4" type='video/mp4'>
-            </video>
-            <div class="service-section-header service-section-header-product">
-                <p class="section-description din-uppercase light">Endless opportunities<br />in product design</p> 
-                <hr class="mobile-hide cic-yellow-hr">
-                <p class="small light">Our NPD (New Product Development) team help a variety of companies design and develop market leading products. Whether it is utilising our in depth knowledge of upcoming trends, colours or materials, or if you are looking to design and develop a totally unique product from scratch, we can help bring your vision into reality.</p> 
-                <p class="small light"><strong>Services:</strong> Concept Design, Ideation Sketching, 3D Visualisation, Market Analysis, Trend Reports, CAD Production</p>
-                <a href="portfolio.html#npd">
-                    <button class="btn btn-primary btn-med btn-product service-button-shift">NPD PROJECTS</button>
-                </a>
-            </div>
-        </div>  
-    </div>
-    
-    <div class="section">
-        <div class="clearfix"></div>
-        <div class="full-page-video-holder china-section">   
-            <video id="china-panel-video" class="full-panel section-video" loop="true" autoplay="true" data-autoplay preload="auto" poster="img/portfolio/service-china/china-video-cover.jpg" data-setup="{}">
-            <source src="img/portfolio/service-china/china-video-cover.mp4" type='video/mp4'>
-            </video>                 
-            <div class="col-xs-12 no-padding home-footer-container">
-                <footer class="no-padding" id="footer">
-                    <div class="col-xs-12 footer-container">
-                        <div class="col-xs-6 footer-text">
-                            &copy; CIC Photographic Ltd 2016<span class="mobile-hide"> - All rights reserved</span>
-                        </div>
-                        <div class="col-xs-6 footer-text">
-                            <a href="/contact.html">
-                                <button class="btn btn-primary btn-med footer-contact mobile-hide" id="contact-button">CONTACT US <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></button>
-                            </a>
-                            <a href="#main" class="page-scroll">
-                                <button class="btn btn-primary btn-med footer-contact" id="contact-button">BACK TO TOP <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
-                            </a>
-                        </div>
+            <div class="element-item col-lg-4 col-md-4 col-sm-6 col-xs-12 cgi video" title="Aerobike CGI Video">              
+                <a class="portfolio-link" href="portfolio/aerobike.html">
+                    <div class="portfolio-text-overlay">
+                        <div class="portfolio-text-overlay-title">X-Ride CGI Video<br></div>
+                        <div class="portfolio-text-overlay-client">Aerobike</div>
                     </div> 
-                </footer> 
+                    <img class="portfolio-img" src="img/portfolio/covers/aerobike.jpg" alt="Aerobike CGI Video">  
+                </a>
             </div>
-            <div class="service-section-header service-section-header-china">
-                <p class="section-description din-uppercase light">Where it's made<br />and where it's sold</p> 
-                <hr class="mobile-hide">
-                <p class="small light">Sourcing product in China? We can fast track your product to market. From modelling your product to printing your packaging, CIC China complements the UK team every step of the way ensuring your marketing material is produced quickly and professionally reducing your time to market.</p> 
-                <p class="small light"><strong>Services:</strong> Design, Print Production and Logistics, CGI, Product Design, Print Quality Control</p>
-                <button id="china-video-popup-open" class="btn btn-primary btn-med service-button-shift">SEE OUR PROCESS <span class="glyphicon glyphicon-play"></span></button>
+            
+            <div class="element-item col-lg-4 col-md-4 col-sm-6 col-xs-12 video design cgi" title="Blinds 2 Go Direct Response TV Advert">                
+                <a class="portfolio-link" href="portfolio/blinds-2-go.html">                
+                    <div class="portfolio-text-overlay">
+                        <div class="portfolio-text-overlay-title">Branding, Imagery &amp; TV<br></div>
+                        <div class="portfolio-text-overlay-client">Blinds2Go</div>
+                    </div> 
+                    <img class="portfolio-img" src="img/portfolio/covers/blinds2go.jpg" alt="Blinds 2 Go Direct Response TV Advert">   
+                </a>
             </div>
-        </div>
-    </div>
+             
+            <div class="element-item col-lg-4 col-md-4 col-sm-6 col-xs-12 cgi video" title="Victoria Plum Direct Response TV Advert and CGI Images">
+                <a class="portfolio-link" href="portfolio/victoria-plum.html">
+                    <div class="portfolio-text-overlay">
+                        <div class="portfolio-text-overlay-title">TV Campaign &amp; Imagery<br></div>
+                        <div class="portfolio-text-overlay-client">VictoriaPlum.com</div>
+                    </div> 
+                    <img class="portfolio-img" src="img/portfolio/covers/victoria-plum.jpg" alt="Victoria Plum Direct Response TV Advert and CGI Images">
+                </a>
+            </div>
+            
+        </div>   
 
+        <div class="row">
+            <a href="/portfolio.html">
+                <button class="btn btn-primary btn-sm on-white">see Our Work</button>
+            </a>
+        </div>
+
+    </section>
+
+
+    <section id="clients"> 
+
+        <section id="client-list" class="no-padding">
+
+            <div class="row wrapper">
+                <h2 class="centered">Our Clients</h2>
+                <div class="color-icons">
+                    <div class="color-icon-design"></div>
+                    <div class="color-icon-video"></div>
+                    <div class="color-icon-product"></div>
+                    <div class="color-icon-cgi"></div>
+                    <div class="color-icon-photo"></div>
+                </div>
+            </div>  
+
+            <div class="case-study-section">
+                <div class="case-study-section-paragraph">
+                    We believe that a favourite brand is far more valuable than a famous one. Working with forward-thinking clients we are confident of delivering both, providing genuinely impactful results that both ourselves and our clients can be proud of.
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Aerobike Client Logo" src="img/client-logos/aerobike-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Akai Client Logo" src="img/client-logos/akai-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Atlas Client Logo" src="img/client-logos/atlas-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Blinds2Go Client Logo" src="img/client-logos/blinds2go-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Brother Client Logo" src="img/client-logos/brother-logo-v2-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="B&amp;Q Client Logo" src="img/client-logos/b-and-q-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="DAR Lighting Client Logo" src="img/client-logos/dar-lighting-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Ideal Shopping Client Logo" src="img/client-logos/ideal-shopping-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Fellows Client Logo" src="img/client-logos/fellows-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Kingfisher Client Logo" src="img/client-logos/kingfisher-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Leisure Grow Outdoor Client Logo" src="img/client-logos/leisure-grow-outdoor-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Matalan Client Logo" src="img/client-logos/matalan-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Morphy Richards Client Logo" src="img/client-logos/morphy-richards-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Merlin Entertainments Client Logo" src="img/client-logos/merlin-entertainments-logo-grey.png">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="RKW Client Logo" src="img/client-logos/rkw-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Screwfix Client Logo" src="img/client-logos/screwfix-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Stax Client Logo" src="img/client-logos/stax-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Swan Client Logo" src="img/client-logos/swan-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="TimCo Client Logo" src="img/client-logos/timco-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Tower Client Logo" src="img/client-logos/tower-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="USANA Client Logo" src="img/client-logos/usana-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="VictoriaPlum.com Client Logo" src="img/client-logos/victoria-plum-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Wade Ceramics Client Logo" src="img/client-logos/wade-logo-grey.svg">
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <img class="img-responsive" alt="Wedgwood Client Logo" src="img/client-logos/wedgwood-logo-grey.svg">
+                </div>
+            </div>
+
+            <div class="row centered">
+                <a href="/contact.html">
+                    <button class="btn btn-primary btn-sm on-white">Join The List</button>
+                </a>
+            </div>
+                
+        </section>
+
+    </section>
 
     <include src="footer.html"></include>
 
@@ -288,33 +356,20 @@
     <script async src="js/typed.js"></script>
     <script async src="js/typed.custom.js"></script>    
     <script async src="js/creative-fullscreen.js"></script>
-    <script src="https://player.vimeo.com/api/player.js"></script>
 
-
-    <!--Grey fade on load-->
+    <!--Deal with top navbar fixing-->
     <script>
+        var navbar = document.getElementById('mainNav');
+        var brandLogo = document.getElementById('main-logo-home');
 
-        $(document).ready(function(){ 
-            $('.loading-screen').fadeOut(1000);
-        });        
-        // China video popup/close
-
-        $(function() {
-
-            var iframe = document.querySelector('iframe');
-            var player = new Vimeo.Player(iframe);
-
-            $('#china-video-popup-open').click(function() {
-                $('.china-video-popup').css({"display": "block"});
-                $('#china-video-popup-close').css({"display": "block"});
-                player.play();
-            });
-            $('#china-video-popup-close').click(function() {
-                $('.china-video-popup').css({"display": "none"});
-                $('#china-video-popup-close').css({"display": "none"});
-                player.pause();
-            });
-        });
+        window.onscroll = function() {
+            if (window.pageYOffset > 300) {
+                navbar.classList.add('affix');
+                brandLogo.classList.add('main-logo');
+            } else {
+                navbar.classList.remove('affix');
+            }
+        };
     </script>
 
 </html>
