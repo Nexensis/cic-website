@@ -1,5 +1,4 @@
 var gulp    = require('gulp');
-var uglify  = require('gulp-uglify');
 var concat  = require('gulp-concat');
 var changed = require('gulp-changed');
 var nano    = require('gulp-cssnano');
