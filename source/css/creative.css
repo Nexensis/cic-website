@@ -449,10 +449,16 @@ section {
 
 #services h3 {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 20px;
     text-transform: none;
     font-weight: 300;
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 25px;
+}
+
+#services h1 {
+    font-size: 48px;
+    letter-spacing: 1px;
 }
 
 .what-we-do {
@@ -641,6 +647,15 @@ aside {
     .page-scroll-top {
         padding-top: 50px !important;
     }
+
+    #services h1 {
+        font-size: 30px;    
+    }
+
+    #services h3 {
+        font-size: 18px;    
+    }
+
 }
 
 @media(min-width:768px) {
@@ -1389,7 +1404,20 @@ header .header-content .header-content-inner .video-subheading p {
         color: #969696;
     }
     
+    #about-header {
+        padding-top: 60px !important;
+    }
+
+    .about-intro, .about-intro h2 {
+        padding-bottom: 0 !important;
+        text-align: left;
+    }
+    
     .section-video {
+        display: none;
+    }
+
+    #about-header .video-wrapper {
         display: none;
     }
 
@@ -3497,7 +3525,7 @@ img::-moz-selection {
     .case-study-section-paragraph p {
         font-family: 'Open Sans', Arial, sans-serif;
         font-weight: 300;
-        font-size: 15px;  
+        font-size: 15px !important;  
     }
 
     .pad-top {
@@ -3924,6 +3952,18 @@ img::-moz-selection {
     margin: 0;
 }
 
+@media(min-width:768px) {
+
+    .about-studio-images-left {
+        padding-right: 1.5px !important;
+    }
+
+    .about-studio-images-right {
+        padding-left: 1.5px !important;
+    }
+
+}
+
 .about-services-block {
     height: 360px;    
     width: 20%;
@@ -4067,8 +4107,8 @@ img::-moz-selection {
 }
 
 .what-we-do-text p {
-    font-size: 20px;
     margin-bottom: 0;
+    font-size: 20px;
 }
 
 .call-to-action {
@@ -4253,6 +4293,10 @@ img::-moz-selection {
     .fast-track-packaging {
         padding-top: 30px;
         padding-bottom: 50px;
+    }
+
+    .about-studio-images-right {
+        padding-top: 2px !important;
     }
 
 }

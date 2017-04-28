@@ -54,7 +54,7 @@ gulp.task('fonts', function() {
 gulp.task('css', function() {
     return gulp.src('./source/css/*.css')    
         .pipe(concat('cic.min.css'))
-        // .pipe(nano()) // Only enable for deployment, too slow for development
+        .pipe(nano()) // Only enable for deployment, too slow for development
         .pipe(gulp.dest('./build/css/'))
         .pipe(bs.stream());
 });
