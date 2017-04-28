@@ -69,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'din-condensed-web','Helvetica Neue',Arial,sans-serif;
+    font-family: 'din-condensed','Helvetica Neue',Arial,sans-serif;
     text-transform: uppercase;
 }
 
@@ -86,7 +86,7 @@ button {
 }
 
 .din-uppercase {
-    font-family: 'din-condensed-web','Helvetica Neue',Arial,sans-serif !important;
+    font-family: 'din-condensed','Helvetica Neue',Arial,sans-serif !important;
     text-transform: uppercase;
 }
 
@@ -511,7 +511,7 @@ aside {
 
 .navbar-default {
     border: none;
-    font-family: 'din-condensed-web','Helvetica Neue',Arial,sans-serif;
+    font-family: 'din-condensed','Helvetica Neue',Arial,sans-serif;
     background-color: rgba(255,255,255,.0);
     border-color: rgba(255,255,255,.0);
     -webkit-transition: all .35s;
@@ -585,7 +585,7 @@ aside {
     text-align: center;
     font-size: 28px;
     font-weight: 600;
-    font-family: "din-condensed-web", Helvetica, sans-serif;
+    font-family: "din-condensed", Helvetica, sans-serif;
     letter-spacing: 2px;
     color: #fff;
 }
@@ -1027,7 +1027,7 @@ header .header-content .header-content-inner p {
     font-size: 48px;
     letter-spacing: 3px;
     color: #fff;
-    font-family: 'din-condensed-web', sans-serif;
+    font-family: 'din-condensed', sans-serif;
 
 }
 
@@ -1147,7 +1147,7 @@ header .header-content .header-content-inner .video-subheading p {
 
 .section-heading {
     margin-top: 0;
-    font-family: 'din-condensed-web', Helvetica, Arial, sans-serif;
+    font-family: 'din-condensed', Helvetica, Arial, sans-serif;
 }
 
 .service-box {
@@ -1303,7 +1303,7 @@ header .header-content .header-content-inner .video-subheading p {
 }
 
 .about-header {
-    font-family: 'din-condensed-web', 'Open Sans', Helvetica, sans-serif;
+    font-family: 'din-condensed', 'Open Sans', Helvetica, sans-serif;
     font-size: 90px;
     line-height: 90px;
     color: #fff;
@@ -1480,7 +1480,7 @@ header .header-content .header-content-inner .video-subheading p {
 }
 
 .service-rollovers {
-    font-family: 'din-condensed-web', Helvetica, Arial, sans-serif;
+    font-family: 'din-condensed', Helvetica, Arial, sans-serif;
     font-size: 45px;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -1754,7 +1754,7 @@ header .header-content .header-content-inner .video-subheading p {
     height: 100%;
     color: #222;
     background-color: #f4f4f4;
-    font-family: 'din-condensed-web', Helvetica, Arial, sans-serif;
+    font-family: 'din-condensed', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 100px; 
     -webkit-transition: all .35s;
@@ -1958,7 +1958,7 @@ header .header-content .header-content-inner .video-subheading p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'din-condensed-web','Helvetica Neue',Arial,sans-serif;
+    font-family: 'din-condensed','Helvetica Neue',Arial,sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -2445,7 +2445,7 @@ img::-moz-selection {
     padding: 32% 10% 0 10%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
-    font-family: 'din-condensed-web', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'din-condensed', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 2em;
     line-height: 0.9em;
     opacity: 0;
@@ -2644,7 +2644,7 @@ img::-moz-selection {
     margin: 0 60px;
     padding: 0;
     text-align: left;
-    font-family: 'din-condensed-web';
+    font-family: 'din-condensed';
 }
 
 .blinds-2-go-logo {
@@ -2767,7 +2767,7 @@ img::-moz-selection {
  
 .case-study-title {
     text-align: left;
-    font-family: 'din-condensed-web', 'Open Sans', Arial, sans-serif;
+    font-family: 'din-condensed', 'Open Sans', Arial, sans-serif;
     font-size: 120px;
     margin-left: 55px;
     margin-bottom: 30px;
@@ -2809,7 +2809,7 @@ img::-moz-selection {
    
 .section-description {
     text-align: center;
-    font-family: 'din-condensed-web','Open Sans', Arial, sans-serif;
+    font-family: 'din-condensed','Open Sans', Arial, sans-serif;
     font-size: 75px;
     line-height: 70px;
     text-transform: uppercase;
@@ -3406,7 +3406,7 @@ img::-moz-selection {
 }
 
 .case-study-section-header {
-    font-family: 'din-condensed-web', 'Open Sans', Arial, sans-serif;
+    font-family: 'din-condensed', 'Open Sans', Arial, sans-serif;
     font-size: 50px;
     line-height: 40px;
     margin-bottom: 20px;
@@ -3421,7 +3421,7 @@ img::-moz-selection {
 }
 
 .service-list {
-    font-family: 'din-condensed-web' !important;
+    font-family: 'din-condensed' !important;
     padding-left: 20px;
     font-size: 1.3em !important;
 }
@@ -3884,24 +3884,24 @@ img::-moz-selection {
 
 .about-intro {
     background-color: #fff; 
-    padding: 45px 15px 50px 15px;
+    padding: 40px 15px 5px 15px;
     color: #fff;
     text-align: center;
 }
 
 .about-intro h2 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.4em;
     text-transform: none;
-    max-width: 800px;
+    max-width: 890px;
     margin: 0 auto;
     color: #333;
 }
 
 .about-approach {
-    padding: 35px 15px;
+    padding: 80px 15px 35px 15px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -3910,17 +3910,9 @@ img::-moz-selection {
     text-align: center;
 }
 
-.about-approach .color-icons {
-    margin-top: 20px;
-}
-
 .about-approach-text {
     font-weight: 300;
-    margin-top: 30px;
-}
-
-.about-approach-text-right {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .einstein-quote {
@@ -4019,7 +4011,7 @@ img::-moz-selection {
 
 .about-services-block li {
    font-size: 20px;
-    font-family: 'din-condensed-web','Helvetica Neue',Arial,sans-serif !important;
+    font-family: 'din-condensed','Helvetica Neue',Arial,sans-serif !important;
     text-transform: uppercase;
     letter-spacing: 1px;
     list-style: none;
@@ -4246,7 +4238,7 @@ img::-moz-selection {
     }
 
     .about-approach {
-        padding: 20px 5%;
+        padding: 60px 5% 20px 5%;
     }
 
     .about-approach-text-right {
